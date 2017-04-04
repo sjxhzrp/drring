@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>注册</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            outline: none;
+            text-decoration: none;
+        }
+
+        .smallcass{
+            width: 321px;
+            height:487px;
+            border-radius:3px;
+            position: relative;
+            position: absolute;
+            top:110px;
+            left:800px;
+            background-color: #ffffff;
+            opacity: 1;
+            z-index: 999;
+        }
+        .smallcass li{
+             float: left;
+             width: 159px;
+             height: 47px;
+             border-bottom: 1px solid #D2D5D7;
+             border-left: 1px solid #D2D5D7;
+             background-color: #F5F5F5;
+         }
+        .smallcass .active{
+            border-bottom: none;
+            border-left: none;
+            background-color: #ffffff;
+        }
+        .smallcass a{
+            width: 152px;
+            height: 47px;
+            display: inline-block;
+            text-align: center;
+            line-height: 47px;
+            color: #626262;
+        }
+        .smallcass .active1{
+            color: #C67C59;
+        }
+        form{
+            position: absolute;
+            top:90px;
+        }
+        form input{
+            margin-left: 25px;
+        }
+        form #yanzheng{
+            width: 150px;
+        }
+        form #yanzhengma{
+            width: 120px;
+        }
+        form #huoquyanzhengma{
+            float: right;
+            width: 105px;
+            height: 40px;
+            position: absolute;
+            top:165px;
+            left: 160px;
+            background: url("../../public/images/getCodeBtn.png") no-repeat;
+            color: #c57d5c;
+            text-align: center;
+            font-size: 12px;
+            line-height: 40px;
+        }
+        form .form-control{
+            height: 40px;
+        }
+        form #btn1{
+            position: absolute;
+            top:300px;
+        }
+        form #check,#check1{
+            position: absolute;
+            left: 25px;
+            top:12px;
+        }
+        .checkbox{
+            position: absolute;
+            left:20px;
+        }
+        .checkbox a{
+            color: #C67C59;
+        }
+        .checkbox label{
+            color: #888888;
+            font-size: 12px;
+        }
+        form #btn,#btn1{
+            width: 250px;
+            position: absolute;
+            top:250px;
+            left:40px;
+        }
+        form .denglu{
+            position: absolute;
+            top: 350px;
+            left:170px;
+        }
+        form .denglu a{
+            font-size: 12px;
+            color: #666666;
+        }
+        #tanchuk{
+            width: 250px;
+            border: 1px solid #FF7373;
+            position: absolute;
+            top:60px;
+            left: 25px;
+            border-radius: 3px;
+        }
+        #tanchuk span{
+            color: red;
+        }
+        #emilform button{
+            position: absolute;
+            top:300px;
+        }
+        .drlogo{
+            display: inline;
+            position: absolute;
+            left: 200px;
+        }
+        .drlogo img{
+            position: absolute;
+            top:6px;
+        }
+        .drlogo-right{
+            display: inline;
+            position: absolute;
+            right: 200px;
+            top:20px;
+        }
+        .drlogo-right .left,.right{
+            float: left;
+            display: inline;
+
+        }
+        .drlogo-right .join{
+            display: inline-block;
+            background: #d9b39b;
+            color: #ffffff;
+            padding: 0 10px;
+            height: 20px;
+            line-height: 20px;
+        }
+        .dr_member_left a,i{
+            display: inline-block;
+            padding: 0 15px 0 9px;
+            font-size: 12px;
+            color:#8d8d8d;
+        }
+        .right span{
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: url(../../public/images/bread_right.png ) no-repeat;
+        }
+        #imgs{
+            position: absolute;
+            top:62px;
+            height: 565px;
+            overflow: hidden;
+            position: relative;
+        }
+        /*#imgs ul{*/
+            /*position: absolute;*/
+            /*top:0px;*/
+            /*left: 0px;*/
+        /*}*/
+        #imgs li{
+            float: left;
+            width: 1349px;
+            height: 565px;
+        }
+        #imgs li img{
+            width: 1349px;
+            height: 565px;
+        }
+        #imgs .img1{
+            z-index: 10;
+        }
+        #imgs .img2{
+            z-index: 1;
+        }
+    </style>
+    <link rel="stylesheet" href="../../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../public/css/footer.css">
+    <script src="../../public/js/jquery-1.12.4.min.js"></script>
+    <script src="../../public/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="bigcass">
+        <div class="drlogo">
+            <a href="#">
+                <img src="../../public/images/logo.png"/>
+            </a>
+        </div>
+        <div class="drlogo-right">
+            <div class="dr_member_left left" id="long_status">
+                <a href="">登录</a>
+                <a href="" class="join">加入DR族</a>
+            </div>
+            <div class="dr_member_left left">
+                <i><img src="../../public/images/telleft.png"/>400-01-13520</i>
+            </div>
+            <div class="dr_member_left right">
+                <a href="">帮助中心</a>
+                <span></span>
+            </div>
+        </div>
+        <div id="imgs">
+            <ul>
+                <li class="img1"><a href="#"><img src="../../public/images/login.jpg"/></a> </li>
+                <li class="img2"><a href="#"><img src="../../public/images/login2.jpg"/></a> </li>
+            </ul>
+        </div>
+        <!--<div class="dryuan">-->
+            <!--<ul>-->
+                <!--<li><span></span></li>-->
+                <!--<li><span></span></li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <div class="smallcass" >
+            <ul>
+                <li class="active" id="firstli"><a href="#" class="active1" id="shouji">账号注册</a></li>
+                <li id="secondli"><a href="#" id="emil">邮箱注册</a></li>
+            </ul>
+            <div id="tanchuk" style="display: none">
+                <span></span>
+            </div>
+            <form  id="zhanghao" style="display: block;">
+                <div class="form-group">
+                    <input type="text" class="form-control " id="txt1" placeholder="请输入您的账号">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="pwd1" placeholder="请输入长度为6-20位数的密码">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="pwds2" placeholder="请再次输入密码">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="yanzhengma" placeholder="输入验证码">
+                    <a href="javascript:void(0)" id="huoquyanzhengma" >获取语音验证码</a>
+                </div>
+
+                <div class="checkbox form-group">
+                    <input type="checkbox" name="check" id="check1" checked="checked">
+                    <label for="check">同意Darry Ring用户
+                    <a href="" style="display: inline;">注册协议</a>和
+                    <a href="" style="display: inline">隐私条款</a>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary" id="btn1">立即加入DR族</button>
+                <div class="denglu"><a href="#">已有账号  登录</a></div>
+            </form>
+
+            <form style="display: none" id="emilform">
+                <div class="form-group">
+                    <input type="text" class="form-control " id="txt" placeholder="请输入您的邮箱">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="pwd" placeholder="请输入长度为6-20位数的密码">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="pwd2" placeholder="请再次输入密码">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="yanzheng" placeholder="请输入验证码">
+                </div>
+
+                <div class="checkbox form-group">
+                    <input type="checkbox" name="check" id="check" checked="checked">
+                    <label for="check">同意Darry Ring用户
+                        <a href="" style="display: inline;">注册协议</a>和
+                        <a href="" style="display: inline">隐私条款</a>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary" id="btn">立即加入DR族</button>
+                <div class="denglu"><a href="#">已有账号  登录</a></div>
+            </form>
+        </div>
+    </div>
+
+
+    <!--底部-->
+    <div class="dr_footer">
+        <div class="dr_footer_top"></div>
+        <ul class="dr_footer-icon dr_header_content">
+            <li>
+                <a href="/help/28">
+                    <i class="footer-icon1"></i>
+                    <span>权威认证</span>
+                </a>
+            </li>
+            <li>
+                <a href="/help/42">
+                    <i class="footer-icon2"></i>
+                    <span>一钻双证</span>
+                </a>
+            </li>
+            <li>
+                <a href="/help/41">
+                    <i class="footer-icon3"></i>
+                    <span>终生保养</span>
+                </a>
+            </li>
+            <li>
+                <a href="/help/43">
+                    <i class="footer-icon4"></i>
+                    <span>以小换大</span>
+                </a>
+            </li>
+            <li>
+                <a href="/help/45">
+                    <i class="footer-icon5"></i>
+                    <span>15天退换</span>
+                </a>
+            </li>
+            <li>
+                <a href="/help/36">
+                    <i class="footer-icon6"></i>
+                    <span>全国免运费</span>
+                </a>
+            </li>
+            <li>
+                <a href="/help/44">
+                    <i class="footer-icon7"></i>
+                    <span>全程保险</span>
+                </a>
+            </li>
+        </ul>
+        <!--灰色区域-->
+        <div class="dr_gray">
+            <!--帮助-->
+            <div class="dr_help dr_header_content fix">
+                <div class="dr_help-all fl">
+                    <div class="dr_help-top">
+                        <div class="dr_help-left dr_help-gz fl" id="dr_help-gz">
+                            关注我们
+                            <!--分享按钮-->
+                            <div class="comShare" style="display: none;">
+                                <a class="shareWeibo" target="_blank" href=""></a>
+                                <a class="shareQzone" target="_blank" href=""></a>
+                                <a class="shareQweibo" target="_blank" href=""></a>
+                                <a class="shareRenren" target="_blank" href=""></a>
+                                <a class="shareDouban" target="_blank" href=""></a>
+
+                                <img src="../../public/images/ew.jpg"/>
+                            </div>
+                            <!--分享按钮end-->
+                        </div>
+                        <a class="dr_help-left" href="">真爱查询</a>
+                        <a class="dr_help-left" href="">实体店免费预约</a>
+                        <a class="dr_help-left droline_showkf" href="" onclick="">在线客服</a>
+                    </div>
+                </div>
+                <div class="dr_help-all fl">
+                    <p>免费服务热线 工作时间:9:00-22:30</p>
+                    <img src="../../public/images/tel.png">
+                </div>
+            </div>
+            <!--帮助end-->
+        </div>
+
+        <!--黑色区域        -->
+        <div class="dr_black">
+            <div class="dr_header_content">
+                <!--服务-->
+                <ul class="dr_servie">
+                    <li>
+                        <h4>关于我们</h4>
+                        <a href="/help/28">权威认证</a>
+                        <a href="/help/30">合作专区</a>
+                        <a href="/help/32">加入我们</a>
+                    </li>
+                    <li>
+                        <h4>购物指南</h4>
+                        <a href="/help/34">购买流程</a>
+                        <a href="/help/27">支付方式</a>
+                        <a href="/help/36">配送流程</a>
+                    </li>
+                    <li>
+                        <h4>售后服务</h4>
+                        <a href="/help/37">退货流程</a>
+                        <a href="/help/38">办理售后</a>
+                        <a href="/help/45">15天退换</a>
+                    </li>
+                    <li>
+                        <h4>帮助中心</h4>
+                        <a href="/help/33">注册流程</a>
+                        <a class="droline_showkf" href="" onclick="">联系客服</a>
+                        <a href="/help/104">网站地图</a>
+                    </li>
+                    <li>
+                        <h4>服务条款</h4>
+                        <a href="/help/41">终生保养</a>
+                        <a href="/help/46">注册协议</a>
+                        <a href="/help/47">隐私声明</a>
+                    </li>
+                    <li>
+                        <h4>DR资讯</h4>
+                        <a href="">钻石百科</a>
+                        <a href="">产品百科</a>
+                        <a href="">求婚指南</a>
+                    </li>
+                </ul>
+                <!--服务end-->
+                <!--声明-->
+                <div class="dr_statement">
+                    <p>Copyright © 2006-2016 www.darryring.com 戴瑞珠宝 All Rights Reserved. 粤ICP备11012085号-2</p>
+                    <p>粤ICP备11012085号-2 | 中国互联网违法信息举报中心 | 中国公安网络110报警服务 | 本网站提供所售商品的正式发票 </p>
+                    <p>深圳市戴瑞珠宝有限公司</p>
+                </div>
+                <!--声明end-->
+                <!--友情链接-->
+                <div class="dr_friendshare">
+                    <span>友情链接：</span>
+                    <a href="" target="_blank">戴瑞珠宝官网</a>
+                    <a href="" target="_blank">求婚词</a>
+                    <a href="" target="_blank">钻石戒指</a>
+                    <a href="" target="_blank">魅网女性网</a>
+                    <a href="" target="_blank">拍鞋网</a>
+                    <a href="" target="_blank">饰品品牌</a>
+                    <a href="" target="_blank">化妆品库</a>
+                    <a href="" target="_blank">南京房产网</a>
+                    <a href="" target="_blank">娱乐新闻</a>
+                    <a href="" target="_blank">建材商城</a>
+                    <a href="" target="_blank">手表品牌排行</a>
+                    <a href="" target="_blank">识货</a>
+                    <a href="" target="_blank">梦芭莎时尚网</a>
+                    <a href="" target="_blank">发型设计</a>
+                    <a href="" target="_blank">白领</a>
+                    <a href="" target="_blank">眼镜店</a>
+                    <a href="" target="_blank">婚纱摄影</a>
+                    <a href="" target="_blank">播视网视频</a>
+                    <a href="" target="_blank">发型</a>
+                    <a href="" target="_blank">中国女装网</a>
+                    <a href="" target="_blank">快递查询</a>
+                    <a href="" target="_blank">火车票查询</a>
+                    <a href="" target="_blank">伊宅购村安商城</a>
+                    <a href="" target="_blank">珂兰钻石</a>
+                    <a href="" target="_blank">海外房产</a>
+                    <a href="" target="_blank">白酒招商</a>
+                    <a href="" target="_blank">爱藏网</a>
+                    <a href="" target="_blank">新浪当代艺术</a>
+                    <a href="" target="_blank">淘翠网</a>
+                    <a href="" target="_blank">重庆房产</a>
+                    <a href="" target="_blank">天气预报查询</a>
+                    <a href="" target="_blank">海淘</a>
+                    <a href="" target="_blank">258</a>
+                    <a href="" target="_blank">大学院校库</a>
+                    <a href="" target="_blank">佐卡伊钻戒</a>
+                    <a href="" target="_blank">南湖国旅</a>
+                    <a href="" target="_blank">化妆品招商</a>
+                    <a href="" target="_blank">笔趣阁txt下载</a>
+                    <a href="" target="_blank">女性健康</a>
+                    <a href="" target="_blank">钻戒</a>
+                    <a href="" target="_blank">礼物</a>
+                    <a href="" target="_blank">手表品牌大全</a>
+                    <a href="" target="_blank">钻戒</a>
+                    <a href="" target="_blank">婚嫁网</a>
+                    <a href="" target="_blank">手机靓号网</a>
+                    <a href="" target="_blank">律师</a>
+                    <a href="" target="_blank">海淘攻略</a>
+
+
+                </div>
+                <!--友情链接end-->
+                <!--中英文切换-->
+                <div class="dr_langues">
+                    <a href="">中文简体/</a>
+                    <a href="">繁体中文/</a>
+                    <a href="">English</a>
+                </div>
+                <!--中英文切换end-->
+            </div>
+        </div>
+    </div>
+
+    <!--</div>-->
+    <script>
+        $("#emil").on("click",function () {
+            $("#zhanghao").hide();
+            console.log($('ul li:eq(0)'));
+            $("#emilform").show();
+            $("ul #firstli").attr("class","");
+            $("ul #secondli").attr("class","active");
+            $("#emil").attr("class","active1");
+            $("#shouji").attr("class","")
+        });
+        $("#shouji").on("click",function () {
+            console.log("bbb");
+            $("#emilform").hide();
+            $("#zhanghao").show();
+            $("ul #firstli").attr("class","active");
+            $("ul #secondli").attr("class","");
+            $("#emil").attr("class","");
+            $("#shouji").attr("class","active1")
+        })
+        $("#pwd1").on("click",function () {
+            var zhval=$("#txt1").val();
+            var reg=/^\d+$/;
+            if(zhval==""){
+                $("#tanchuk").show();
+                $("#tanchuk span").html("账号不能为空");
+            }else if(reg.test(zhval)!=true){
+                $("#tanchuk").show();
+                $("#tanchuk span").html("账号只允许数字");
+            }if(reg.test(zhval)==true){
+                $("#tanchuk").hide();
+            }
+        })
+//        window.onload=function () {
+//            var spad=1349;
+//            var oDiv=document.getElementById("imgs");
+//            var oUl=oDiv.getElementsByTagName("ul")[0];
+//            var oLi=oUl.getElementsByTagName("li");
+//            oUl.innerHTML+=oUl.innerHTML;
+//            oUl.style.width=oLi[0].offsetWidth*oLi.length+"px";
+//            var timer=setInterval(move,1000)
+//            function move() {
+//                if(oUl.offsetLeft<-oUl.offsetWidth/2){
+//                    oUl.style.left="0";
+//                }
+//
+//                if(oUl.offsetLeft>0){
+//                    oUl.style.left=-oUl.offsetWidth/2+"px";
+//                }
+//                oUl.style.left=oUl.offsetLeft+spad+"px";
+//                console.log(oUl.offsetLeft)
+//                console.log(oLi.length)
+//
+//            }
+//        }
+
+//        $(function () {
+//            var timer=setInterval(function () {
+//                if($(".img1").css("z-index")==10){
+//                    $(".img1").css("z-index")==1;
+//                    $(".img2").css("z-index")==10;
+//                }else if($(".img1").css("z-index")==1){
+//                    $(".img1").css("z-index")==10;
+//                    $(".img2").css("z-index")==10;
+//                }
+//            })
+//        })
+
+
+
+
+    </script>
+</body>
+</html>

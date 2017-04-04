@@ -1,0 +1,230 @@
+*{
+    padding:0px;
+    margin: 0 auto;
+}
+.dr_footer {
+    width: 100%;
+    position: absolute;
+    top:620px;
+    background-color: #fff;
+}
+.dr_footer_top{
+    background: url(../../public/images/footer_rp.jpg) repeat-x;
+    height:34px;
+}
+.dr_footer-icon {
+    overflow: hidden;
+    padding: 30px 0;
+}
+.dr_header_content{
+    width: 1000px;
+    /*position: relative;*/
+    margin: 0 auto;
+}
+ol,ul,li{
+    list-style:none;
+    padding:0;
+}
+.dr_footer-icon a,.dr_footer-icon span{
+    display: inline-block;
+    color: #666;
+    text-align: center;
+}
+.dr_footer-icon a{
+    width: 80px;
+}
+.dr_footer-icon span{
+    margin-top: 7px;
+    font-size: 14px;
+}
+a{
+    text-decoration: none;
+    outline: none;
+    /*cursor: auto;*/
+}
+a:-webkit-any-link{
+    cursor: auto;
+}
+.dr_footer-icon li{
+    float: left;
+    width: 80px;
+    text-align: center;
+    margin: 0 31px;
+    /*display: list-item;*/
+}
+.dr_footer-icon i {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-image: url(../../public/images/icon_footer.png);
+}
+i {
+    font-style: inherit;
+}
+.footer-icon1 {
+    background-position: 0px 0;
+}
+.footer-icon2 {
+    background-position: -60px 0;
+}
+.footer-icon3 {
+    background-position: -120px 0;
+}
+.footer-icon4 {
+    background-position: -180px 0;
+}
+.footer-icon5 {
+    background-position: -240px 0;
+}
+.footer-icon6 {
+    background-position: -300px 0;
+}
+.footer-icon7 {
+    background-position: -360px 0;
+}
+.dr_gray{
+    background: #e9e9e9;
+    padding: 26px 0;
+    height: 100px;
+}
+
+.fl{
+    float: left;
+    display: inline;
+}
+.dr_header_content{
+    width: 1000px;
+    /*position: relative;*/
+    margin: 0 auto;
+}
+.dr_help-gz{
+    position: relative;
+    z-index: 2;
+}
+.dr_help-left{
+    display: inline-block;
+    background: url(../../public/images/coin_left.png) no-repeat left center;
+    height: 39px;
+    line-height: 39px;
+    padding-left:46px;
+    color: #797979;
+    font-size: 20px;
+    margin-right: 48px;
+}
+.dr_help-all .comShare {
+    display: none;
+    position: absolute;
+    top: 38px;
+    left: 10px;
+    width: 180px;
+    background: #e9e9e9;
+    padding: 20px 0;
+    text-align: center;
+    line-height: 0;
+    z-index: 2;
+}
+.comShare {
+    width: 230px;
+    font-size: 0;
+}
+.comShare a{
+    display: inline-block;
+    width: 10px;
+    height: 26px;
+    background: url(../../public/images/ico-shares.png) no-repeat;
+    margin-top: 12px;
+    margin-left: 5px;
+}
+.comShare a.shareWeibo{
+    background-position: 0 0;
+}
+.comShare a.shareQzone{
+    background-position: -31px 0;
+}
+.comShare a.shareQweibo{
+    background-position: -62px 0;
+}
+.comShare a.shareRenren{
+    background-position: -93px 0;
+}
+.comShare a.shareDouban{
+    background-position: 0 -34px;
+}
+.dr_help-all p{
+    margin-bottom: 6px;
+}
+p{
+    font-size: 14px;
+    /*font-style: inherit;*/
+    color: #888888;
+}
+form,div,p{
+    display: block;
+}
+/*黑色部分*/
+.dr_black {
+    background: #797979;
+    padding: 56px 0;
+}
+.dr_header_content{
+    width: 1000px;
+    margin:0 auto;
+}
+.dr_servie{
+    overflow: hidden;
+    font-family: "SimSun";
+    font-size: 14px;
+    color: #cdcdcd;
+    line-height: 22px;
+}
+.dr_servie li{
+    float: left;
+    border-left:2px solid #959292;
+    padding:6px 50px;
+}
+.dr_servie li:first-child{
+    border: none;
+    margin-left: 20px;
+}
+.dr_servie h4{
+    font-weight: bold;
+    color: #cdcdcd;
+    font-size: 14px;
+}
+.dr_servie a{
+    color: #cdcdcd;
+    display: block;
+}
+.dr_statement{
+    text-align: center;
+    font-size: 12px;
+    color: #c9c7c7;
+    line-height: 20px;
+    margin-top: 68px;
+}
+.dr_friendshare{
+    color: #999898;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 8px;
+    padding-bottom: 40px;
+}
+.dr_friendshare  a{
+    display: inline-block;
+    color: #999898;
+    margin: 0 6px 4px 6px;
+}
+.dr_langues{
+    font-family: "SimSun";
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.dr_langues a{
+    color: #cdcdcd;
+}
+
+
+
+

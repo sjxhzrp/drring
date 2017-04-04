@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>登录</title>
+    <link rel="stylesheet" href="../../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../public/css/login.css">
+    <script src="../../public/js/jquery-1.12.4.min.js"></script>
+    <script src="../../public/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div id="logindiv">
+        <form id="loginform">
+            <h3>DR族-登录</h3>
+            <div class="phone">
+                <div class="form-group">
+                    <input type="text" class="form-control " id="txt1" placeholder="请输入您的手机号码">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="yanzhengma" placeholder="输入验证码">
+                    <a href="javascript:void(0)" id="huoquyanzhengma" >获取短信验证码</a>
+                </div>
+                <p>使用<a href="javascript:void(0)" class="usepassword">密码登录</a>
+                    <i>&nbsp;&nbsp;|&nbsp;&nbsp;</i>
+                    <a href="javascript:void(0)" class="getcode">获取语音验证码</a>
+                </p>
+            </div>
+            <div class="email" style="display: none">
+                <div class="form-group">
+                    <input type="text" class="form-control " id="txtName" name="data[email]" placeholder="请输入您的邮箱/手机">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control " id="pwd" name="data[password]" placeholder="请输入密码">
+                </div>
+                <p class="actionpwd">
+                    <input id="isRemeber" type="checkbox" name="remeber" value="1">
+                    <label for="isRemeber">记住密码</label>
+                    <a href="javascript:void(0)" id="forgetpwd">忘记密码？</a>
+                </p>
+                <p class="usePhoneyanzhengma">使用<a href="javascript:void(0)" class="usePhone">手机验证码登录</a></p>
+            </div>
+            <div id="dr-btn">
+                <a class="loginbtn">登录</a>
+                <a class="joinbtn">加入DR族</a>
+            </div>
+        </form>
+    </div>
+    <div id="findpwd" style="display: none">
+        <ul>
+            <li class="active" id="myli1"><a href="#" class="active1" id="phone">通过手机找回</a></li>
+            <li id="myli2"><a href="#" id="email">通过邮箱找回</a></li>
+        </ul>
+        <form id="getphone">
+            <div class="form-group">
+                <input type="text" class="form-control " id="phonehaoma" placeholder="请输入您注册的手机号码">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="pwd2" placeholder="请输入长度为6-20位数的密码">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="phoneyanzhengma" placeholder="输入验证码">
+                <a href="javascript:void(0)" id="phonehuoquyanzhengma" >获取语音验证码</a>
+            </div>
+            <input type="button"  value="确认重置密码" class="colorbtn"/>
+            <div class="loginlink">
+                <a href="javascript:void(0)" class="fanhui">>返回登录</a>
+            </div>
+        </form>
+        <form id="getemail" style="display: none">
+            <div class="form-group">
+                <input type="text" class="form-control " id="emaildizhi" placeholder="请输入您的邮箱地址">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="emailyanzhengma" placeholder="请输入验证码">
+            </div>
+            <input type="button"  value="确认重置密码" class="colorbtn" id="chongzhi"/>
+            <div class="loginlink" id="loginlink">
+                <a href="javascript:void(0)" class="fanhui">>返回登录</a>
+            </div>
+        </form>
+    </div>
+    <script>
+        $(".usePhone").on("click",function () {
+            $(".email").hide();
+            $(".phone").show();
+        })
+        $(".usepassword").on("click",function () {
+            $(".phone").hide();
+            $(".email").show();
+        })
+        $("#email").on("click",function () {
+            $("#myli1").attr("class","");
+            $("#myli2").attr("class","active");
+            $("#email").attr("class","active1");
+            $("#phone").attr("class","");
+            $("#getphone").hide();
+            $("#getemail").show();
+        });
+        $("#phone").on("click",function () {
+            $("#myli1").attr("class","active");
+            $("#myli2").attr("class","");
+            $("#email").attr("class","");
+            $("#phone").attr("class","active1");
+            $("#getphone").show();
+            $("#getemail").hide();
+        });
+        $("#forgetpwd").on("click",function () {
+            $("#logindiv").hide();
+            $("#findpwd").show();
+        });
+        $(".fanhui").on("click",function () {
+            $("#findpwd").hide();
+            $("#logindiv").show();
+        })
+    </script>
+</body>
+</html>
