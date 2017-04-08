@@ -8,11 +8,87 @@ li{
 a{
     text-decoration: none;
 }
+
+.drlogo{
+    display: inline;
+    position: absolute;
+    left: 200px;
+}
+.drlogo img{
+    position: absolute;
+    top:6px;
+}
+.drlogo-right{
+    display: inline;
+    position: absolute;
+    right: 200px;
+    top:20px;
+}
+.drlogo-right .left,.right{
+    float: left;
+    display: inline;
+
+}
+.drlogo-right .join{
+    display: inline-block;
+    background: #d9b39b;
+    color: #ffffff;
+    padding: 0 10px;
+    height: 20px;
+    line-height: 20px;
+}
+.dr_member_left a,i{
+    display: inline-block;
+    padding: 0 15px 0 9px;
+    font-size: 12px;
+    color:#8d8d8d;
+}
+.right span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: url(../../public/images/bread_right.png ) no-repeat;
+}
+#imgs{
+    position: absolute;
+    top:62px;
+    height: 565px;
+    overflow: hidden;
+    position: relative;
+}
+/*#imgs ul{*/
+/*position: absolute;*/
+/*top:0px;*/
+/*left: 0px;*/
+/*}*/
+#imgs li{
+    float: left;
+    width: 1349px;
+    height: 565px;
+}
+#imgs li img{
+    width: 1349px;
+    height: 565px;
+}
+#imgs .img1{
+    z-index: 10;
+}
+#imgs .img2{
+    z-index: 1;
+}
+
+
+
 #logindiv{
     width: 312px;
     height: 382px;
-    border: 1px solid red;
     position: relative;
+    position: absolute;
+    top:110px;
+    left:800px;
+    background-color: #ffffff;
+    opacity: 1;
+    z-index: 999;
 }
 #logindiv h3{
     text-align: center;
@@ -114,8 +190,11 @@ a{
 #findpwd{
     width: 312px;
     height: 382px;
-    border: 1px solid red;
     position: relative;
+    position: absolute;
+    top:110px;
+    left:800px;
+    background: #ffffff;
 }
 #findpwd li{
     float: left;
@@ -198,8 +277,14 @@ a{
 #findpwd form .loginlink a:hover{
     color: #c57d5c;
 }
-#findpwd form #emailyanzhengma{
+#findpwd form #input{
     width: 120px;
+}
+#findpwd form #code{
+    width: 80px;
+    position: absolute;
+    top: 55px;
+    left: 160px;
 }
 #findpwd form #chongzhi{
     position: absolute;
@@ -209,3 +294,12 @@ a{
     position: absolute;
     top: 200px;
 }
+#code{
+    font-family:Arial;
+    font-style:italic;
+    font-weight:bold;
+    border:0;
+    letter-spacing:2px;
+    color:blue;
+}
+

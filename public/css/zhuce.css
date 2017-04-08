@@ -1,0 +1,213 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+li {
+    list-style: none;
+}
+a {
+    outline: none;
+    text-decoration: none;
+}
+
+.smallcass{
+    width: 321px;
+    height:487px;
+    border-radius:3px;
+    position: relative;
+    position: absolute;
+    top:110px;
+    left:800px;
+    background-color: #ffffff;
+    opacity: 1;
+    z-index: 999;
+}
+.smallcass li{
+    float: left;
+    width: 159px;
+    height: 47px;
+    border-bottom: 1px solid #D2D5D7;
+    border-left: 1px solid #D2D5D7;
+    background-color: #F5F5F5;
+}
+.smallcass .active{
+    border-bottom: none;
+    border-left: none;
+    background-color: #ffffff;
+}
+.smallcass ul li a{
+    width: 152px;
+    height: 47px;
+    display: inline-block;
+    text-align: center;
+    line-height: 47px;
+    color: #626262;
+}
+.smallcass .active1{
+    color: #C67C59;
+}
+form{
+    position: absolute;
+    top:90px;
+}
+form input{
+    margin-left: 25px;
+}
+form #yanzheng{
+    width: 120px;
+}
+form #code{
+    font-family:Arial;
+    font-style:italic;
+    font-weight:bold;
+    border:0;
+    border-radius:5px;
+    letter-spacing:2px;
+    color:blue;
+    width: 80px;
+    height: 30px;
+    position: absolute;
+    top:170px;
+    left:140px;
+}
+form #input{
+    width: 120px;
+}
+form #yanzhengma{
+    width: 120px;
+}
+form #huoquyanzhengma{
+    float: right;
+    width: 105px;
+    height: 40px;
+    position: absolute;
+    top:165px;
+    left: 160px;
+    background: url("../../public/images/getCodeBtn.png") no-repeat;
+    color: #c57d5c;
+    text-align: center;
+    font-size: 12px;
+    line-height: 40px;
+}
+form .form-control{
+    height: 40px;
+}
+form #btn1{
+    position: absolute;
+    top:300px;
+}
+form #check,#check1{
+    position: absolute;
+    left: 25px;
+}
+.checkbox{
+    position: absolute;
+    left:20px;
+}
+.checkbox a{
+    color: #C67C59;
+}
+.checkbox label{
+    display: inline-block;
+    width: 300px;
+    color: #888888;
+    font-size: 12px;
+}
+form #btn,#btn1{
+    width: 250px;
+    position: absolute;
+    top:250px;
+    left:40px;
+}
+form .denglu{
+    position: absolute;
+    width: 100%;
+    top: 350px;
+    left:200px;
+}
+form .denglu a{
+    font-size: 12px;
+    color: #666666;
+}
+#tanchuk{
+    width: 250px;
+    border: 1px solid #FF7373;
+    position: absolute;
+    top:60px;
+    left: 25px;
+    border-radius: 3px;
+}
+#tanchuk span{
+    color: red;
+}
+#emilform button{
+    position: absolute;
+    top:300px;
+}
+.drlogo{
+    display: inline;
+    position: absolute;
+    left: 200px;
+}
+.drlogo img{
+    position: absolute;
+    top:6px;
+}
+.drlogo-right{
+    display: inline;
+    position: absolute;
+    right: 200px;
+    top:20px;
+}
+.drlogo-right .left,.right{
+    float: left;
+    display: inline;
+
+}
+.drlogo-right .join{
+    display: inline-block;
+    background: #d9b39b;
+    color: #ffffff;
+    padding: 0 10px;
+    height: 20px;
+    line-height: 20px;
+}
+.dr_member_left a,i{
+    display: inline-block;
+    padding: 0 15px 0 9px;
+    font-size: 12px;
+    color:#8d8d8d;
+}
+.right span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: url(../../public/images/bread_right.png ) no-repeat;
+}
+#imgs{
+    position: absolute;
+    top:62px;
+    height: 565px;
+    overflow: hidden;
+    position: relative;
+}
+/*#imgs ul{*/
+/*position: absolute;*/
+/*top:0px;*/
+/*left: 0px;*/
+/*}*/
+#imgs li{
+    float: left;
+    width: 1349px;
+    height: 565px;
+}
+#imgs li img{
+    width: 1349px;
+    height: 565px;
+}
+#imgs .img1{
+    z-index: 10;
+}
+#imgs .img2{
+    z-index: 1;
+}
