@@ -11,6 +11,7 @@
     <script src="../../public/js/jquery-1.12.4.min.js"></script>
     <script src="../../public/js/bootstrap.min.js"></script>
     <script src="../../public/js/checkCode.js"></script>
+    <script src="../../public/js/banner.js"></script>
 </head>
 <body>
 <div class="bigcass">
@@ -32,12 +33,22 @@
             <span></span>
         </div>
     </div>
-    <div id="imgs">
-        <ul>
-            <li class="img1"><a href="#"><img src="../../public/images/login.jpg"/></a> </li>
-            <li class="img2"><a href="#"><img src="../../public/images/login2.jpg"/></a> </li>
-        </ul>
-    </div>
+    <!--banner轮播图-->
+    <ul class="dr_bannerul fix" id="drHomeBan">
+
+        <li>
+            <a href="#" target="_blank">
+                <img src="../../public/images/login.jpg" />
+            </a>
+        </li>
+        <li>
+            <a href="#" target="_blank">
+                <img src="../../public/images/login2.jpg" />
+            </a>
+        </li>
+    </ul>
+    <!--banner轮播图 end-->
+
 
 
     <div id="logindiv">
@@ -341,6 +352,17 @@
             $("#findpwd").hide();
             $("#logindiv").show();
         })
+
+        //背景图片轮播
+        //调用banner组件
+
+        $(function() {
+            var indexBan = new Banner().init({
+                id: '#drHomeBan',
+                btnListId: '#banBtns',
+                btnListClass: 'drbanner_click'
+            });
+        })();
     </script>
 </body>
 </html>

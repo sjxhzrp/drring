@@ -8,7 +8,10 @@ li{
 a{
     text-decoration: none;
 }
+a:hover{
 
+    text-decoration: none;
+}
 .drlogo{
     display: inline;
     position: absolute;
@@ -49,33 +52,22 @@ a{
     height: 10px;
     background: url(../../public/images/bread_right.png ) no-repeat;
 }
-#imgs{
+#drHomeBan{
     position: absolute;
     top:62px;
     height: 565px;
-    overflow: hidden;
     position: relative;
+    width: 1349px;
+}
+#drHomeBan li{
+    overflow: hidden;
+    width: 100%;
 }
 /*#imgs ul{*/
 /*position: absolute;*/
 /*top:0px;*/
 /*left: 0px;*/
 /*}*/
-#imgs li{
-    float: left;
-    width: 1349px;
-    height: 565px;
-}
-#imgs li img{
-    width: 1349px;
-    height: 565px;
-}
-#imgs .img1{
-    z-index: 10;
-}
-#imgs .img2{
-    z-index: 1;
-}
 
 
 
