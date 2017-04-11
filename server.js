@@ -72,7 +72,7 @@ app.use("/",require("./routers/main"));
 
 
 //使用静态资源管理插件
-// app.use(express.static("../blog"));   //这个page下面的所有的文件全部都使用静态资源管理
+// app.use(express.static("../drring"));   //这个page下面的所有的文件全部都使用静态资源管理
 
 
 //监听
