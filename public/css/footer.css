@@ -3,13 +3,11 @@
     margin: 0 auto;
 }
 .dr_footer {
-    width: 100%;
-    position: absolute;
-    top:620px;
+    padding-top: 45px;
     background-color: #fff;
 }
 .dr_footer_top{
-    background: url(../../public/images/footer_rp.jpg) repeat-x;
+    background: url(../images/footer_rp.jpg) repeat-x;
     height:34px;
 }
 .dr_footer-icon {
@@ -56,13 +54,13 @@ a:-webkit-any-link{
     display: inline-block;
     width: 60px;
     height: 60px;
-    background-image: url(../../public/images/icon_footer.png);
+    background-image: url(../images/icon_footer.png);
 }
 i {
     font-style: inherit;
 }
 .footer-icon1 {
-    background-position: 0px 0;
+    background-position: 0 0;
 }
 .footer-icon2 {
     background-position: -60px 0;
@@ -85,7 +83,7 @@ i {
 .dr_gray{
     background: #e9e9e9;
     padding: 26px 0;
-    height: 100px;
+    height: 60px;
 }
 
 .fl{
@@ -103,7 +101,7 @@ i {
 }
 .dr_help-left{
     display: inline-block;
-    background: url(../../public/images/coin_left.png) no-repeat left center;
+    background: url(../images/coin_left.png) no-repeat left center;
     height: 39px;
     line-height: 39px;
     padding-left:46px;
@@ -131,7 +129,7 @@ i {
     display: inline-block;
     width: 10px;
     height: 26px;
-    background: url(../../public/images/ico-shares.png) no-repeat;
+    background: url(../images/ico-shares.png) no-repeat;
     margin-top: 12px;
     margin-left: 5px;
 }
@@ -198,7 +196,7 @@ form,div,p{
 .dr_statement{
     text-align: center;
     font-size: 12px;
-    color: #c9c7c7;
+    color:#C9C7C7;
     line-height: 20px;
     margin-top: 68px;
 }

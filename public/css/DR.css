@@ -1,0 +1,488 @@
+.dr_indexAdv{
+    height:320px;
+    background: url(../images/firstListBg.jpg) no-repeat center top;
+    padding-top:20px;
+}
+.dr_indexAdvCon{
+    width:1200px;
+    margin: 0 auto;
+}
+.dr_indexAdvItem{
+    position: relative;
+    float: left;
+    width:390px;
+    margin-left: 15px;
+    text-align: center;
+    overflow: hidden;
+}
+.dr_indexAdvItem:first-child{
+    margin-left: 0;
+}
+.dr_indexAdvItem a{
+    position: relative;
+    display: block;
+}
+.dr_indexAdvItem h3 {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    font-family: "SimSun";
+    color: #1a1a1a;
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+    z-index: 2;
+}
+.dr_indexAdvItem p{
+    position: absolute;
+    top:65px;
+    left:0;
+    width: 100%;
+    font-family: SimSun;
+    color: #666;
+    text-align: center;
+    line-height: 28px;
+    z-index:2;
+}
+.dr_indexAdvItem img{
+    position: relative;
+    width: 100%;
+    transition: transform 5s;
+    transform: translateZ(0);
+    z-index: 1;
+}
+
+/*白色底*/
+.pad-76{
+    padding-bottom: 76px;
+}
+.w1200{
+    font-family: SimSun;
+}
+.w1200{
+    width: 1200px;
+    margin:0 auto;
+}
+.dr_shop{
+    margin-bottom: 22px;
+}
+.same_bg-two {
+    position: relative;
+    text-align: center;
+    background: #dfcbc5;
+    height: 90px;
+    margin: 28px 0 32px;
+}
+.same_bg-two p{
+    position: absolute;
+    top:0;
+    left:6px;
+    width: 100%;
+    font-size: 18px;
+    font-family: SimSun;
+    font-weight: bold;
+    text-align: center;
+    line-height: 90px;
+}
+.same_bg-two p a{
+    color: #fff;
+}
+.same_bg-two img{
+    margin-top: -22px;
+}
+.dr_shopList{
+    padding: 12px 0;
+    text-align: center;
+}
+.dr_shopList a{
+    display: inline-block;
+    padding:0 15px;
+    border-left: 1px solid #bcbcbc;
+    color: #666;
+    font-size:20px;
+    line-height:20px;
+}
+.dr_shopList a:first-child{
+    border:none
+}
+.dr_shopView{
+    height: 470px;
+}
+.dr_shopShow {
+    position: relative;
+    float: right;
+    width: 705px;
+    height: 470px;
+    background: #f1f0f1;
+    overflow: hidden;
+}
+ul,ol,li{
+    list-style: none;
+}
+.dr_shopShowUl li {
+    float: left;
+    width: 705px;
+    height: 470px;
+    background: #f1f0f1;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.dr_shopSesc {
+    float: left;
+    width: 314px;
+    padding-top: 134px;
+    text-align: center;
+}
+.dr_shopSesc h4 {
+    line-height: 40px;
+}
+.dr_shopSesc h4 a {
+    color: #1a1a1a;
+    font-size: 22px;
+}
+.dr_hr {
+    width: 60px;
+    height: 10px;
+    margin: 6px auto 6px;
+    border-bottom: 1px solid #2f2f2f;
+}
+.dr_shopSesc h5 {
+    color: #c57d5c;
+    font-size: 14px;
+    line-height: 28px;
+}
+.dr_shopSesc p {
+    color: #666;
+    font-size: 14px;
+    line-height: 30px;
+}
+a.dr_shopMore {
+    display: inline-block;
+    width: 118px;
+    height: 32px;
+    margin-top: 30px;
+    color: #c57d5c;
+    border: 1px solid #c57d5c;
+    line-height: 32px;
+}
+.dr_shopStroy {
+    float: right;
+    margin-top: 50px;
+    margin-right: 30px;
+    font-size: 0;
+}
+.dr_shopStroy img {
+    width: 360px;
+    height: 225px;
+}
+.dr_shopStroyInfo {
+    height: 100px;
+    padding-top: 30px;
+    background: #fff;
+    font-size: 14px;
+    text-align: center;
+}
+.dr_shopStroyInfo h6 {
+    color: #1a1a1a;
+    line-height: 26px;
+}
+.dr_shopStroyInfo p {
+    color: #666;
+    line-height: 26px;
+}
+
+.dr_shopShow-index {
+    position: absolute;
+    left: 0;
+    bottom: 26px;
+    width: 100%;
+    text-align: center;
+}
+.dr_shopShow-index ul{
+    display: inline-block;
+}
+.dr_shopShow-index li.active {
+    background-position: left -18px;
+}
+.dr_shopShow-index li {
+    float: left;
+    width: 10px;
+    height: 10px;
+    background: url(../images/ico-bd.png) no-repeat left 1px;
+    margin: 0 9px;
+    cursor: pointer;
+}
+.dr_shopOrdered {
+    float: left;
+    position: relative;
+    width: 495px;
+}
+.dr_shopOrdActive {
+    position: absolute;
+    top: 194px;
+    left: 68px;
+    width: 336px;
+    height: 30px;
+    padding: 6px 14px;
+    background: #fff;
+    font-size: 14px;
+    line-height: 30px;
+}
+.dr_shopOrdActive span {
+    display: inline-block;
+    width: 116px;
+    text-align: center;
+    color: #4c4c4c;
+}
+.dr_shopOrdActive input {
+    width: 160px;
+    color: #bf967c;
+    height: 30px;
+    padding-left: 20px;
+    border: none;
+    background: url(../images/ico-gps1.png) no-repeat left center;
+    line-height: 30px;
+}
+input {
+    outline: none;
+    border: 1px solid #aeaeae;
+}
+.dr_shopOrdActive a {
+    position: absolute;
+    top: 6px;
+    right: 12px;
+    display: inline-block;
+    width: 28px;
+    height: 30px;
+    background: url(../images/ico-seach1.png) no-repeat center center;
+}
+a.dr_shopOrdBtn {
+    display: block;
+    position: absolute;
+    top: 268px;
+    left: 68px;
+    width: 360px;
+    height: 44px;
+    background: #d49e85;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    line-height: 44px;
+}
+.dr_adv2{
+    position: relative;
+}
+.dr_adv2Left{
+    left:0;
+}
+.dr_adv2Desc{
+    position: absolute;
+    top:70px;
+    width: 460px;
+    text-align: center;
+}
+.dr_adv2Desc h3{
+    font-size: 20px;
+    line-height: 40px;
+}
+.dr_adv2Desc h3 a{
+    color: #1a1a1a;
+}
+.dr_hr {
+    width: 60px;
+    height: 10px;
+    margin: 6px auto 6px;
+    border-bottom: 1px solid #2f2f2f;
+}
+.dr_adv2Desc p{
+    line-height: 30px;
+    color: #666;
+}
+.dr_adv2Right{
+    right:0;
+}
+.dr_adv2Desc p a{
+    color: #c57d5c;
+}
+.dr_adv3con{
+    height: 450px;
+}
+.dr_adv3Item {
+    position: relative;
+    float: left;
+    font-size: 0;
+    text-align: center;
+}
+.dr_adv3Item img{
+    width:400px;
+    height:450px;
+}
+.dr_adv3Item h3{
+    position: absolute;
+    bottom:82px;
+    left:0;
+    width:100%;
+    font-size: 18px;
+    color: #000;
+}
+.dr_adv3Item p{
+    position: absolute;
+    bottom:38px;
+    left:0;
+    width:100%;
+}
+.dr_adv3Item p a.adv3Link{
+    font-size: 14px;
+    color:#c57d5c;
+}
+.same_bg-oneNew{
+    position: relative;
+    background: url(../images/sbg1.jpg) repeat-x;
+    height: 68px;
+    margin: 34px 0 20px;
+    font-family: "Microsoft YaHei UI";
+    font-size: 18px;
+    line-height: 82px;
+    text-indent: 32px;
+}
+.same_bg-oneNew a.sameLink{
+    color: #626262;
+}
+.dr_advShowCon{
+    position: relative;
+}
+.dr_advShowInfo.right{
+    left:inherit;
+    right:60px;
+}
+.dr_advShowInfo{
+    position: absolute;
+    top:160px;
+    left:60px;
+    width:450px;
+    text-align: center;
+}
+.dr_advShowInfo a{
+    color: #d9b39b;
+    font-size: 14px;
+    line-height: 26px;
+}
+.dr_advShowInfo h4{
+    color: #1a1a1a;
+    font-size: 22px;
+    line-height: 38px;
+}
+.dr_advShowInfo p{
+    font-size: 14px;
+    color: #666;
+    line-height: 26px;
+}
+.dr_giftView{
+    height:890px;
+}
+.dr_giftTab{
+    position: relative;
+    text-align: center;
+}
+.dr_giftTab ul{
+    display: inline-block;
+}
+.dr_giftTab li{
+    float:left;
+    width:260px;
+    height:45px;
+    line-height: 45px;
+}
+.dr_giftTab li a{
+    display: block;
+    color: #666;
+    font-size: 20px;
+}
+.dr_giftTab a.dr_giftMore {
+    position: absolute;
+    top: 0;
+    right: 36px;
+    height: 45px;
+    color: #d9b39b;
+    font-size: 14px;
+    line-height: 45px;
+}
+.dr_giftItem div{
+    font-size: 0;
+}
+.dr_giftCLeft,.dr_giftBLeft{
+    float: left;
+}
+.dr_giftItem div{
+    font-size: 0;
+}
+.dr_giftCRight,.dr_giftBRight {
+    float: right;
+}
+.same_bg-oneNew a.same_more{
+    position: absolute;
+    top: 14px;
+    right: 36px;
+    color: #c57d5c;
+    font-size: 14px;
+    line-height: 54px;
+}
+.dr_Star{
+    height:1047px;
+}
+.dr_starAdv{
+    position: relative;
+    margin-top: 20px;
+}
+.dr_starInfo{
+    position: absolute;
+    top:50px;
+    left:0;
+    width:100%;
+    text-align: center;
+}
+.dr_starInfo h4{
+    color: #000;
+    font-size:24px;
+    line-height:40px;
+}
+.dr_starInfo p{
+    color: #666;
+    font-size: 18px;
+    line-height: 26px;
+}
+.dr_forumAdvR {
+    position: relative;
+    float: right;
+    width: 600px;
+}
+.dr_forumAdvRInfo {
+    position: absolute;
+    top: 36%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+.dr_forumAdvRInfo h5 {
+    color: #fff;
+    font-size: 24px;
+    line-height: 40px;
+}
+.dr_forumAdvRInfo a.dr_forumMore {
+    display: inline-block;
+    width: 120px;
+    height: 34px;
+    border: 1px solid #c57d5c;
+    margin-top: 20px;
+    color: #c57d5c;
+    line-height: 34px;
+}
+.dr_forumAdvL {
+    float: left;
+    width: 600px;
+}
+
+
+
