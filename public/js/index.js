@@ -76,7 +76,7 @@ $(function () {
                      // $resBox.find("[name=password]").val("");
                      // $resBox.find("[name=repassword]").val("");
                      // window.location.href='denglu.html';
-                     console.log("注册成功")
+                     console.log("注册成功.")
                  },1000);
              }
           }
