@@ -11,7 +11,7 @@ var router=express.Router();
 var pool=mysql.createPool({
     host:"127.0.0.1",
     port:3306,
-    database:"drring",
+    database:"dr",
     user:"root",
     password:"aaaa"
 });
@@ -19,8 +19,7 @@ var pool=mysql.createPool({
 router.get("/",function (req,res) {
     //使用模板引擎去渲染界面
     //            第一个参数模板的路径  第二个参数分配给模板使用的数据
-    res.render("main/index",{
-        userInfo:req.session.user
+    res.render("main/zhuce",{
 
     });
 });

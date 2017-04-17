@@ -44,7 +44,7 @@ app.use(session({
 var pool=mysql.createPool({
     host:"127.0.0.1",
     port:3306,
-    database:"drring",
+    database:"dr",
     user:"root",
     password:"aaaa"
 });
@@ -53,7 +53,7 @@ var pool=mysql.createPool({
 //定义路由路径
 //默认引用的js文件所以不用加后缀名
 //加载顺序，从上到下
-app.use("/admin",require("./routers/admin"));
+//app.use("/admin",require("./routers/admin"));
 app.use("/api",require("./routers/api"));
 app.use("/",require("./routers/main"));
 
