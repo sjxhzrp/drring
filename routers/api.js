@@ -61,7 +61,7 @@ router.post("/user/register",function (req,res) {
                res.json(resData);
            }else if(result.length>0){
                resData.code=1;
-               resData.msg="帐号已存在，请重新输入";
+               resData.msg="用户名已存在，请重新输入";
                res.json(resData);
            }else{
                //可以 注册
