@@ -52,7 +52,7 @@ router.post("/user/register",function (req,res) {
    //获取传过来的参数
    var uname=req.body.uname;
    var pwd=req.body.pwd;
-
+    var accont=req.body.accont
    pool.getConnection(function (err,conn) {
        conn.query("select * from user where uname=?",[uname],function (err,result) {
            if(err){
@@ -61,11 +61,11 @@ router.post("/user/register",function (req,res) {
                res.json(resData);
            }else if(result.length>0){
                resData.code=1;
-               resData.msg="用户名已存在，请重新输入";
+               resData.msg="帐号已存在，请重新输入";
                res.json(resData);
            }else{
                //可以 注册
-               conn.query("insert into user  values(null,?,?,0)",[uname,pwd],function (err,resu) {
+               conn.query("insert into user values(null,?,?,null,null,null,?)",[accont,pwd,uname],function (err,resu) {
                    conn.release();
                    if(err){
                        console.log(err);
@@ -112,53 +112,53 @@ router.post("/user/register",function (req,res) {
 // });
 
 //登录2
-router.post("/user/login",function (req,res) {
-    //获取传过来的参数
-    var uname=req.body.uname;
-    var pwd=req.body.pwd;
-
-    pool.getConnection(function (err,conn) {
-        if(err){
-            console.log(err);
-            resData.code=0;
-            resData.msg="网络连接失败，请稍后重试";
-            res.json(resData);
-        }else {
-            conn.query("select * from user where uname=? && pwd=?", [uname, pwd], function (err, result) {
-                conn.release();
-                if (err) {
-                    console.log(err);
-                    resData.code = 0;
-                    resData.msg="网络连接失败，请稍后重试";
-                    res.json(resData);
-
-                } else if(result.length<=0) {
-                    resData.code = 1;
-                    resData.msg="用户名或者密码错误，请验证后再试";
-                    res.json(resData);
-                }else{
-                    resData.code = 2;
-                    resData.msg="登录成功";
-                    resData.info=result[0];   //传输到前台，好收获用户名
-
-                    //存session
-                    req.session.user={
-                        _id:result[0].uid,
-                        uname:result[0].uname,
-                        isAdmin:result[0].isAdmin
-                    };
-                    res.json(resData);
-                }
-            })
-        }
-    })
-});
-
-    //退出
-router.get("/user/logout",function (req,res) {
-    delete req.session.user;
-    res.send("1");
-});
+// router.post("/user/login",function (req,res) {
+//     //获取传过来的参数
+//     var uname=req.body.uname;
+//     var pwd=req.body.pwd;
+//
+//     pool.getConnection(function (err,conn) {
+//         if(err){
+//             console.log(err);
+//             resData.code=0;
+//             resData.msg="网络连接失败，请稍后重试";
+//             res.json(resData);
+//         }else {
+//             conn.query("select * from user where uname=? && pwd=?", [uname, pwd], function (err, result) {
+//                 conn.release();
+//                 if (err) {
+//                     console.log(err);
+//                     resData.code = 0;
+//                     resData.msg="网络连接失败，请稍后重试";
+//                     res.json(resData);
+//
+//                 } else if(result.length<=0) {
+//                     resData.code = 1;
+//                     resData.msg="用户名或者密码错误，请验证后再试";
+//                     res.json(resData);
+//                 }else{
+//                     resData.code = 2;
+//                     resData.msg="登录成功";
+//                     resData.info=result[0];   //传输到前台，好收获用户名
+//
+//                     //存session
+//                     req.session.user={
+//                         _id:result[0].uid,
+//                         uname:result[0].uname,
+//                         isAdmin:result[0].isAdmin
+//                     };
+//                     res.json(resData);
+//                 }
+//             })
+//         }
+//     })
+// });
+//
+//     //退出
+// router.get("/user/logout",function (req,res) {
+//     delete req.session.user;
+//     res.send("1");
+// });
 
 
 

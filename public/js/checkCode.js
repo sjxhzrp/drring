@@ -30,7 +30,7 @@ function validate(){
         document.getElementById("input").value = "";//清空文本框
     }
     else { //输入正确时
-        alert("^-^"); //弹出^-^
+
     }
 }
 
