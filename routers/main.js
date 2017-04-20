@@ -19,7 +19,7 @@ var pool=mysql.createPool({
 router.get("/",function (req,res) {
     //使用模板引擎去渲染界面
     //            第一个参数模板的路径  第二个参数分配给模板使用的数据
-    res.render("main/zhuce",{
+    res.render("main/denglu",{
         userInfo:req.session.user
 
     });

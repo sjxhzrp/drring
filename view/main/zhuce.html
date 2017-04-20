@@ -48,21 +48,21 @@
         <!--</div>-->
         <div class="smallcass" >
             <ul>
-                <li class="active" id="firstli"><a href="#" class="active1" id="shouji">账号注册</a></li>
-                <li id="secondli"><a href="#" id="emil">邮箱注册</a></li>
+                <li class="active" id="firstli"><a href="javascript:void(0)" class="active1" id="shouji">账号注册</a></li>
+                <li id="secondli"><a href="javascript:void(0)" id="emil">邮箱注册</a></li>
             </ul>
             <div id="tanchuk" style="display: none">
                 <span></span>
             </div>
-            <form  id="zhanghao" style="display: block;">
+            <div  id="zhanghao" style="display: block;">
                 <div class="form-group">
-                    <input type="text" class="form-control " id="txt1" placeholder="请输入您的账号">
+                    <input type="text"  name="uname" class="form-control " id="txt1" placeholder="请输入您的账号">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="pwd1" placeholder="请输入长度为6-20位数的密码">
+                    <input type="password" name="pwd" class="form-control" id="pwd1" placeholder="请输入长度为6-20位数的密码">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="pwds2" placeholder="请再次输入密码">
+                    <input type="password" name="repwd" class="form-control" id="pwds2" placeholder="请再次输入密码">
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" id="yanzhengma" placeholder="输入验证码">
@@ -77,11 +77,11 @@
                     </label>
                 </div>
 
-                <button type="submit" class="btn btn-primary" id="btn1">立即加入DR族</button>
+                <button  class="btn btn-primary" id="btn1" type="validate();">立即加入DR族</button>
                 <div class="denglu"><a href="#">已有账号  登录</a></div>
-            </form>
+            </div>
 
-            <form style="display: none" id="emilform">
+            <div style="display: none" id="emilform">
                 <div class="form-group">
                     <input type="text" name="uname" class="form-control " id="txt" placeholder="请输入您的邮箱">
                 </div>
@@ -104,9 +104,9 @@
                     </label>
                 </div>
 
-                <button type="submit" class="btn btn-primary" id="btn">立即加入DR族</button>
+                <button class="btn btn-primary" id="btn" type="validate();">立即加入DR族</button>
                 <div class="denglu"><a href="#">已有账号  登录</a></div>
-            </form>
+            </div>
         </div>
     </div>
 

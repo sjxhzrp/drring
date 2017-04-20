@@ -52,10 +52,12 @@ router.post("/user/register",function (req,res) {
    //获取传过来的参数
    var uname=req.body.uname;
    var pwd=req.body.pwd;
-    var accont=req.body.accont
+    var accont=req.body.accont;
+    console.log(uname);
    pool.getConnection(function (err,conn) {
-       conn.query("select * from user where uname=?",[uname],function (err,result) {
+       conn.query("select * from user where zhanhumin=?",[uname],function (err,result) {
            if(err){
+               console.log(err)
                resData.code=0;
                resData.msg="网络连接失败，请稍后重试";
                res.json(resData);
@@ -65,7 +67,7 @@ router.post("/user/register",function (req,res) {
                res.json(resData);
            }else{
                //可以 注册
-               conn.query("insert into user values(null,?,?,null,null,null,?)",[accont,pwd,uname],function (err,resu) {
+               conn.query("insert into user values(null,?,?,?,null,null,null)",[accont,uname,pwd],function (err,resu) {
                    conn.release();
                    if(err){
                        console.log(err);
@@ -83,76 +85,82 @@ router.post("/user/register",function (req,res) {
    })
 });
 
-//登录1
-// router.post("/user/login",function (req,res) {
-//     //获取传过来的参数
-//     var uname=req.body.uname;
-//     var pwd=req.body.pwd;
-//
-//     pool.getConnection(function (err,conn) {
-//         conn.query("select * from user where uname=? && pwd=?",[uname,pwd],function (err,result) {
-//             conn.release();
-//             if(err){
-//                 resData.code=0;
-//                 resData.msg="网络连接失败，请稍后重试";
-//                 res.json(resData);
-//             }else{
-//                 if(result[0].isAdmin==0){
-//                     resData.code=1;
-//                     resData.msg="进入用户界面";
-//                     res.json(resData);
-//                 }else{
-//                     resData.code=2;
-//                     resData.msg="进入管理员界面";
-//                     res.json(resData);
-//                 }
-//             }
-//         })
-//     })
-// });
-
 //登录2
-// router.post("/user/login",function (req,res) {
-//     //获取传过来的参数
-//     var uname=req.body.uname;
-//     var pwd=req.body.pwd;
-//
-//     pool.getConnection(function (err,conn) {
-//         if(err){
-//             console.log(err);
-//             resData.code=0;
-//             resData.msg="网络连接失败，请稍后重试";
-//             res.json(resData);
-//         }else {
-//             conn.query("select * from user where uname=? && pwd=?", [uname, pwd], function (err, result) {
-//                 conn.release();
-//                 if (err) {
-//                     console.log(err);
-//                     resData.code = 0;
-//                     resData.msg="网络连接失败，请稍后重试";
-//                     res.json(resData);
-//
-//                 } else if(result.length<=0) {
-//                     resData.code = 1;
-//                     resData.msg="用户名或者密码错误，请验证后再试";
-//                     res.json(resData);
-//                 }else{
-//                     resData.code = 2;
-//                     resData.msg="登录成功";
-//                     resData.info=result[0];   //传输到前台，好收获用户名
-//
-//                     //存session
-//                     req.session.user={
-//                         _id:result[0].uid,
-//                         uname:result[0].uname,
-//                         isAdmin:result[0].isAdmin
-//                     };
-//                     res.json(resData);
-//                 }
-//             })
-//         }
-//     })
-// });
+router.post("/user/login",function (req,res) {
+    //获取传过来的参数
+    var uname=req.body.uname;
+    var pwd=req.body.pwd;
+    if (pwd){
+        pool.getConnection(function (err,conn) {
+            if(err){
+                console.log(err);
+                resData.code=0;
+                resData.msg="网络连接失败，请稍后重试";
+                res.json(resData);
+            }else {
+                conn.query("select yonhumin from user where zhanhumin=? && mima=?", [uname, pwd], function (err, result) {
+                    conn.release();
+                    if (err) {
+                        console.log(err);
+                        resData.code = 0;
+                        resData.msg="网络连接失败，请稍后重试";
+                        res.json(resData);
+
+                    } else if(result.length<=0) {
+                        resData.code = 1;
+                        resData.msg="用户名或者密码错误，请验证后再试";
+                        res.json(resData);
+                    }else{
+                        resData.code = 2;
+                        resData.msg="登录成功";
+                        resData.info=result[0];   //传输到前台，好收获用户名
+
+                        //存session
+                        req.session.user={
+                            yonhumin:result[0]
+                        };
+                        res.json(resData);
+                    }
+                })
+            }
+        })
+    }else {
+
+        pool.getConnection(function (err,conn) {
+            if(err){
+                console.log(err);
+                resData.code=0;
+                resData.msg="网络连接失败，请稍后重试";
+                res.json(resData);
+            }else {
+                conn.query("select yonhumin from user where zhanhumin=?", [uname], function (err, result) {
+                    conn.release();
+                    if (err) {
+                        console.log(err);
+                        resData.code = 0;
+                        resData.msg="网络连接失败，请稍后重试";
+                        res.json(resData);
+
+                    } else if(result.length<=0) {
+                        resData.code = 1;
+                        resData.msg="用户名或者密码错误，请验证后再试";
+                        res.json(resData);
+                    }else{
+                        resData.code = 2;
+                        resData.msg="登录成功";
+                        resData.info=result[0];   //传输到前台，好收获用户名
+
+                        //存session
+                        req.session.user={
+                           yonhumin:result[0]
+                        };
+                        res.json(resData);
+                    }
+                })
+            }
+        })
+    }
+});
 //
 //     //退出
 // router.get("/user/logout",function (req,res) {

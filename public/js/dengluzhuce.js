@@ -1,5 +1,5 @@
 $(function () {
-
+    //注册
     $("#emil").on("click",function () {
         $("#zhanghao").hide();
         console.log($('ul li:eq(0)'));
@@ -8,7 +8,6 @@ $(function () {
         $("ul #secondli").attr("class","active");
         $("#emil").attr("class","active1");
         $("#shouji").attr("class","");
-        zhuceFalg=true;
     });
     $("#shouji").on("click",function () {
         $("#emilform").hide();
@@ -17,7 +16,6 @@ $(function () {
         $("ul #secondli").attr("class","");
         $("#emil").attr("class","");
         $("#shouji").attr("class","active1");
-        zhuceFalg=false;
     });
     $("#pwd1").on("click",function () {
         var zhval=$("#txt1").val();
@@ -44,160 +42,142 @@ $(function () {
         return str;
     };
 
-    var emailzhucebtn=$("#btn" );
-    var zhanghaozhuceBtn=$("#btn1");
+    function zhuce (emailform) {
+        var uname = emailform.find("[name='uname']").val();
+        var pwd = emailform.find("[name='pwd']").val();
+        var repwd = emailform.find("[name='repwd']").val();
+        var accont = creatname();
+        if (uname == "" || uname == null || pwd == "" || pwd == null || repwd == "" || repwd == null) {
+            alert("用户名或者密码不能为空");
+            return;
+        }
 
+        if (pwd !== repwd) {
+            alert("两次输入的密码不一致，请重新输入");
+            return;
+        }
 
+        $.ajax({
+            type: "post",
+            url: "/api/user/register",  //地址
+            data: {               //传参
+                uname: uname,
+                pwd: pwd,
+                accont: accont
+            },
+            dataType: "json",
+            success: function (data) {
+                alert(data.msg);
+                window.location.href = "denglu.html";
+            }
+        });
+    }
+
+    var emailform=$("#emilform");
+    var zhanghaoform=$("#zhanghao");
+    var emailzhucebtn=emailform.find("#btn");
+    var zhanghaozhuceBtn=zhanghaoform.find("#btn1");
   // userIsLogin();   //查看是否登录过
 
     //邮箱注册
     emailzhucebtn.on("click",function () {
-        validate();
-
-        if (zhuceFalg){//邮箱注册
-            var uname=emailzhucebtn.find("[name='uname']").val();
-            var pwd=emailzhucebtn.find("[name='pwd']").val();
-            var repwd=emailzhucebtn.find("[name='repwd']").val();
-            var accont=creatname();
-            if( uname=="" ||  uname==null || pwd=="" ||  pwd==null || repwd=="" || repwd==null){
-                alert("用户名或者密码不能为空");
-                return;
-            }
-        }
-
-        if(pwd!==repwd){
-            alert("两次输入的密码不一致，请重新输入");
+        var flag = validate();
+        if (!flag) {
             return;
         }
-        pwd=md5(pwd);
-        console.log(uname);
-        console.log(pwd);
-        console.log(accont);
-       $.ajax({
-          type:"post",
-          url:"/api/user/register",  //地址
-          data:{               //传参
-             uname:uname,
-             pwd:pwd,
-              accont:accont
-          },
-          dataType:"json",
-          success:function (data) {
-              window.location.href="denglu.html"
-             // if(data.code!=2){
-             //     $resBox.find(".colWarning").html(data.msg);
-             // }else{
-             //    //注册成功
-             //     $resBox.find(".colWarning").html(data.msg);
-             //     setTimeout(function () {
-             //         // $resBox.find("[name=username]").val("");
-             //         // $resBox.find("[name=password]").val("");
-             //         // $resBox.find("[name=repassword]").val("");
-             //         location.reload();
-             //         $resBox.hide();
-             //         $loginBox.show();
-             //     },1000);
-          //    }
-           }
-       })
-   });
-
-   //登录1
-   // $loginBox.find("button").on("click",function () {
-   //    var uname=$loginBox.find("[name='username']").val();
-   //    var pwd=$loginBox.find("[name='password']").val();
-   //    console.log("aaaaaaaaaaaaaaaaaaaaaa");
-   //     if(uname=="" ||  uname==null || pwd=="" ||  pwd==null ){
-   //         alert("用户名或者密码不能为空");
-   //         return;
-   //     }
-   //
-   //     $.ajax({
-   //         type:"post",
-   //         url:"/api/user/login",  //地址
-   //         data:{               //传参
-   //             uname:uname,
-   //             pwd:pwd
-   //         },
-   //         dataType:"json",
-   //         success:function (data) {
-   //
-   //             if(data.code==0){
-   //                 alert(data.msg);
-   //             }else if(data.code==1){
-   //                 alert(data.msg);
-   //                 $resBox.hide();
-   //                 $loginBox.hide();
-   //                 $userBox.show();
-   //             }else{
-   //                 alert(data.msg);
-   //                 $resBox.hide();
-   //                 $loginBox.hide();
-   //                 $userBox.show();
-   //             }
-   //         }
-   //     })
-   // })
+        zhuce(emailform);
+    });
+     zhanghaozhuceBtn.on("click",function () {
+        zhuce(zhanghaoform);
+    });
 
 
-    // $(document).keydown(function (event) {
-    //     var e = event ? event : window.event;
-    //     if (e.keyCode == 13) {
-    //         $loginBox.find("button").click();
-    //
-    //     }
-    // });
-    //
-    //
-    //
-    // //登录2
-    // $loginBox.find("button").on("click",function () {
-    //    var uname=$loginBox.find("[name='username']").val();
-    //    var pwd=$loginBox.find("[name='password']").val();
-    //     if(uname=="" ||  uname==null || pwd=="" ||  pwd==null ){
-    //         alert("用户名或者密码不能为空");
-    //         return;
-    //     }
-    //
-    //     pwd=md5(pwd);
-    //
-    //     $.ajax({
-    //         type:"post",
-    //         url:"/api/user/login",  //地址
-    //         data:{               //传参
-    //             uname:uname,
-    //             pwd:pwd
-    //         },
-    //         dataType:"json",
-    //         success:function (data) {
-    //             if(data.code==0){
-    //                 $loginBox.find(".colWarning").html(data.msg);
-    //             }else if(data.code==1){
-    //                 $loginBox.find(".colWarning").html(data.msg);
-    //             }else{
-    //                 $loginBox.find(".colWarning").html(data.msg);
-    //
-    //                 setTimeout(function () {
-    //                     //方法1
-    //                     // $loginBox.hide();
-    //                     // $userBox.show();
-    //                     // //判断是管理员还是普通用户
-    //                     // if(data.info.isAdmin==0){   //普通用户
-    //                     //     $userBox.find("p.userName span").html(data.info.uname);
-    //                     //     $userBox.find("p.adminInfo").hide();
-    //                     // }else if(data.info.isAdmin==1){  //管理员
-    //                     //     $userBox.find("p.userName span").html(data.info.uname);
-    //                     //     $userBox.find("p.adminInfo").show();
-    //                     // }
-    //                     // 方法2
-    //                     window.location.reload();
-    //                 },1000);
-    //             }
-    //         }
-    //     })
-    // });
-    //
-    //
+
+   //登录
+    var dengluflag=true;//定义一个布尔，去判断用户是用手机语音验证码登录的还是用密码登录的，true为验证码
+    $(".usePhone").on("click",function () {
+        $(".email").hide();
+        $(".phone").show();
+        dengluflag=true;
+    })
+    $(".usepassword").on("click",function () {
+        $(".phone").hide();
+        $(".email").show();
+        dengluflag=false;
+    })
+    $("#email").on("click",function () {
+        $("#myli1").attr("class","");
+        $("#myli2").attr("class","active");
+        $("#email").attr("class","active1");
+        $("#phone").attr("class","");
+        $("#getphone").hide();
+        $("#getemail").show();
+    });
+    $("#phone").on("click",function () {
+        $("#myli1").attr("class","active");
+        $("#myli2").attr("class","");
+        $("#email").attr("class","");
+        $("#phone").attr("class","active1");
+        $("#getphone").show();
+        $("#getemail").hide();
+    });
+    $("#forgetpwd").on("click",function () {
+        $("#logindiv").hide();
+        $("#findpwd").show();
+    });
+    $(".fanhui").on("click",function () {
+        $("#findpwd").hide();
+        $("#logindiv").show();
+    });
+
+    var logindiv=$("#logindiv");
+    var denlu=$("#denglubtn");
+    denlu.on("click",function () {
+        if (dengluflag){
+            //验证码登录
+            var uname=logindiv.find("[name='elephone']").val();
+            if(uname=="" ||  uname==null ){
+                alert("用户名不能为空");
+                return;
+            };
+            console.log(uname)
+            $.ajax({
+                type: "post",
+                url: "/api/user/login",  //地址
+                data: {               //传参
+                    uname: uname
+                },
+                dataType: "json",
+                success: function (data) {
+                    console.log(data.msg);
+                    console.log(data.info);
+                }
+            });
+        }else {
+            //密码登录
+            var uname = logindiv.find("[name='email']").val();
+            var pwd = logindiv.find("[name='password']").val();
+            if (uname == "" || uname == null || pwd == "" || pwd == null) {
+                alert("用户名或者密码不能为空");
+                return;
+            };
+            console.log(uname+"_____"+pwd)
+            $.ajax({
+                type: "post",
+                url: "/api/user/login",  //地址
+                data: {               //传参
+                    uname: uname,
+                    pwd: pwd
+                },
+                dataType: "json",
+                success: function (data) {
+                    console.log(data.msg);
+                    console.log(data.info);
+                }
+            })
+        }
+    })
+
     // //退出
     // $logout.on("click",function () {
     //     $.get("/api/user/logout",function (data) {
