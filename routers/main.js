@@ -11,7 +11,7 @@ var router=express.Router();
 var pool=mysql.createPool({
     host:"127.0.0.1",
     port:3306,
-    database:"dr",
+    database:"drring",
     user:"root",
     password:"aaaa"
 });
@@ -19,12 +19,27 @@ var pool=mysql.createPool({
 router.get("/",function (req,res) {
     //使用模板引擎去渲染界面
     //            第一个参数模板的路径  第二个参数分配给模板使用的数据
-    res.render("main/zhuce",{
+    res.render("main/DR",{
+        userInfo:req.session.user
 
     });
 });
+router.get("/login",function (req,res) {
+    //使用模板引擎去渲染界面
+    //            第一个参数模板的路径  第二个参数分配给模板使用的数据
+    res.render("main/denglu",{
+        userInfo:req.session.user
 
+    });
+});
+router.get("/regisetr",function (req,res) {
+    //使用模板引擎去渲染界面
+    //            第一个参数模板的路径  第二个参数分配给模板使用的数据
+    res.render("main/zhuce",{
+        userInfo:req.session.user
 
+    });
+});
 //2、把这个路由的文件和主模块连接起来
 module.exports=router;
 

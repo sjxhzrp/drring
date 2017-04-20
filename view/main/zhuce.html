@@ -11,6 +11,7 @@
     <script src="../../public/js/jquery-1.12.4.min.js"></script>
     <script src="../../public/js/bootstrap.min.js"></script>
     <script src="../../public/js/checkCode.js"></script>
+    <script src="../../public/js/dengluzhuce.js"></script>
 </head>
 
 <body>
@@ -47,21 +48,21 @@
         <!--</div>-->
         <div class="smallcass" >
             <ul>
-                <li class="active" id="firstli"><a href="#" class="active1" id="shouji">账号注册</a></li>
-                <li id="secondli"><a href="#" id="emil">邮箱注册</a></li>
+                <li class="active" id="firstli"><a href="javascript:void(0)" class="active1" id="shouji">账号注册</a></li>
+                <li id="secondli"><a href="javascript:void(0)" id="emil">邮箱注册</a></li>
             </ul>
             <div id="tanchuk" style="display: none">
                 <span></span>
             </div>
-            <form  id="zhanghao" style="display: block;">
+            <div  id="zhanghao" style="display: block;">
                 <div class="form-group">
-                    <input type="text" class="form-control" name="res" id="txt1" placeholder="请输入您的账号">
+                    <input type="text"  name="uname" class="form-control " id="txt1" placeholder="请输入您的账号">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="pwd1" name="name" placeholder="请输入您的用户名">
+                    <input type="password" name="pwd" class="form-control" id="pwd1" placeholder="请输入长度为6-20位数的密码">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="pwds2" name="pwd" placeholder="请输入密码">
+                    <input type="password" name="repwd" class="form-control" id="pwds2" placeholder="请再次输入密码">
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" id="yanzhengma" placeholder="输入验证码">
@@ -76,19 +77,19 @@
                     </label>
                 </div>
 
-                <button type="submit" class="btn btn-primary" id="btn1">立即加入DR族</button>
+                <button  class="btn btn-primary" id="btn1" type="validate();">立即加入DR族</button>
                 <div class="denglu"><a href="#">已有账号  登录</a></div>
-            </form>
+            </div>
 
-            <form style="display: none" id="emilform">
+            <div style="display: none" id="emilform">
                 <div class="form-group">
-                    <input type="text" class="form-control " id="txt" placeholder="请输入您的邮箱">
+                    <input type="text" name="uname" class="form-control " id="txt" placeholder="请输入您的邮箱">
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="pwd" placeholder="请输入您的用户名">
+                    <input type="password" name="pwd" class="form-control" id="pwd" placeholder="请输入长度为6-20位数的密码">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="pwd2" placeholder="请输入密码">
+                    <input type="password"  name="repwd" class="form-control" id="pwd2" placeholder="请再次输入密码">
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" id="input" placeholder="请输入验证码">
@@ -103,9 +104,9 @@
                     </label>
                 </div>
 
-                <button type="submit" class="btn btn-primary" id="btn">立即加入DR族</button>
+                <button class="btn btn-primary" id="btn" type="validate();">立即加入DR族</button>
                 <div class="denglu"><a href="#">已有账号  登录</a></div>
-            </form>
+            </div>
         </div>
     </div>
 
@@ -306,76 +307,6 @@
     </div>
 
     <!--</div>-->
-    <script>
-        $("#emil").on("click",function () {
-            $("#zhanghao").hide();
-            console.log($('ul li:eq(0)'));
-            $("#emilform").show();
-            $("ul #firstli").attr("class","");
-            $("ul #secondli").attr("class","active");
-            $("#emil").attr("class","active1");
-            $("#shouji").attr("class","")
-        });
-        $("#shouji").on("click",function () {
-            console.log("bbb");
-            $("#emilform").hide();
-            $("#zhanghao").show();
-            $("ul #firstli").attr("class","active");
-            $("ul #secondli").attr("class","");
-            $("#emil").attr("class","");
-            $("#shouji").attr("class","active1")
-        })
-        $("#pwd1").on("click",function () {
-            var zhval=$("#txt1").val();
-            var reg=/^\d+$/;
-            if(zhval==""){
-                $("#tanchuk").show();
-                $("#tanchuk span").html("账号不能为空");
-            }else if(reg.test(zhval)!=true){
-                $("#tanchuk").show();
-                $("#tanchuk span").html("账号只允许数字");
-            }if(reg.test(zhval)==true){
-                $("#tanchuk").hide();
-            }
-        })
-//        window.onload=function () {
-//            var spad=1349;
-//            var oDiv=document.getElementById("imgs");
-//            var oUl=oDiv.getElementsByTagName("ul")[0];
-//            var oLi=oUl.getElementsByTagName("li");
-//            oUl.innerHTML+=oUl.innerHTML;
-//            oUl.style.width=oLi[0].offsetWidth*oLi.length+"px";
-//            var timer=setInterval(move,1000)
-//            function move() {
-//                if(oUl.offsetLeft<-oUl.offsetWidth/2){
-//                    oUl.style.left="0";
-//                }
-//
-//                if(oUl.offsetLeft>0){
-//                    oUl.style.left=-oUl.offsetWidth/2+"px";
-//                }
-//                oUl.style.left=oUl.offsetLeft+spad+"px";
-//                console.log(oUl.offsetLeft)
-//                console.log(oLi.length)
-//
-//            }
-//        }
 
-//        $(function () {
-//            var timer=setInterval(function () {
-//                if($(".img1").css("z-index")==10){
-//                    $(".img1").css("z-index")==1;
-//                    $(".img2").css("z-index")==10;
-//                }else if($(".img1").css("z-index")==1){
-//                    $(".img1").css("z-index")==10;
-//                    $(".img2").css("z-index")==10;
-//                }
-//            })
-//        })
-
-
-
-
-    </script>
 </body>
 </html>

@@ -52,11 +52,11 @@
 
 
     <div id="logindiv">
-        <form id="loginform">
+        <div id="loginform">
             <h3>DR族-登录</h3>
             <div class="phone">
                 <div class="form-group">
-                    <input type="text" class="form-control " id="txt1" placeholder="请输入您的手机号码">
+                    <input type="text" class="form-control " id="txt1" name="elephone" placeholder="请输入您的手机号码">
                 </div>
                 <div class="form-group">
                     <input type="text" class="form-control" id="yanzhengma" placeholder="输入验证码">
@@ -69,10 +69,10 @@
             </div>
             <div class="email" style="display: none">
                 <div class="form-group">
-                    <input type="text" class="form-control " id="txtName" name="data[email]" placeholder="请输入您的邮箱/手机">
+                    <input type="text" class="form-control " id="txtName" name="email" placeholder="请输入您的邮箱/手机">
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control " id="pwd" name="data[password]" placeholder="请输入密码">
+                    <input type="password" class="form-control " id="pwd" name="password" placeholder="请输入密码">
                 </div>
                 <p class="actionpwd">
                     <input id="isRemeber" type="checkbox" name="remeber" value="1">
@@ -82,17 +82,17 @@
                 <p class="usePhoneyanzhengma">使用<a href="javascript:void(0)" class="usePhone">手机验证码登录</a></p>
             </div>
             <div id="dr-btn">
-                <a class="loginbtn">登录</a>
+                <a class="loginbtn" id="denglubtn">登录</a>
                 <a class="joinbtn">加入DR族</a>
             </div>
-        </form>
+        </div>
     </div>
     <div id="findpwd" style="display: none">
         <ul>
             <li class="active" id="myli1"><a href="#" class="active1" id="phone">通过手机找回</a></li>
             <li id="myli2"><a href="#" id="email">通过邮箱找回</a></li>
         </ul>
-        <form id="getphone">
+        <div id="getphone">
             <div class="form-group">
                 <input type="text" class="form-control " id="phonehaoma" placeholder="请输入您注册的手机号码">
             </div>
@@ -107,7 +107,7 @@
             <div class="loginlink">
                 <a href="javascript:void(0)" class="fanhui">>返回登录</a>
             </div>
-        </form>
+        </div>
         <form id="getemail" style="display: none">
             <div class="form-group">
                 <input type="text" class="form-control " id="emaildizhi" placeholder="请输入您的邮箱地址">
@@ -320,39 +320,6 @@
     </div>
 </div>
     <script>
-        $(".usePhone").on("click",function () {
-            $(".email").hide();
-            $(".phone").show();
-        })
-        $(".usepassword").on("click",function () {
-            $(".phone").hide();
-            $(".email").show();
-        })
-        $("#email").on("click",function () {
-            $("#myli1").attr("class","");
-            $("#myli2").attr("class","active");
-            $("#email").attr("class","active1");
-            $("#phone").attr("class","");
-            $("#getphone").hide();
-            $("#getemail").show();
-        });
-        $("#phone").on("click",function () {
-            $("#myli1").attr("class","active");
-            $("#myli2").attr("class","");
-            $("#email").attr("class","");
-            $("#phone").attr("class","active1");
-            $("#getphone").show();
-            $("#getemail").hide();
-        });
-        $("#forgetpwd").on("click",function () {
-            $("#logindiv").hide();
-            $("#findpwd").show();
-        });
-        $(".fanhui").on("click",function () {
-            $("#findpwd").hide();
-            $("#logindiv").show();
-        })
-
         //背景图片轮播
         //调用banner组件
 
@@ -362,7 +329,8 @@
                 btnListId: '#banBtns',
                 btnListClass: 'drbanner_click'
             });
-        })();
+        });
     </script>
+    <script src="../../public/js/dengluzhuce.js"></script>
 </body>
 </html>
