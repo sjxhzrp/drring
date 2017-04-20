@@ -68,7 +68,7 @@ $(function () {
             dataType: "json",
             success: function (data) {
                 alert(data.msg);
-                window.location.href = "denglu.html";
+                window.location.href = "login";
             }
         });
     }
@@ -149,7 +149,7 @@ $(function () {
                 },
                 dataType: "json",
                 success: function (data) {
-                    console.log(data.msg);
+                    window.location.href = "/";
                     console.log(data.info);
                 }
             });
@@ -171,7 +171,7 @@ $(function () {
                 },
                 dataType: "json",
                 success: function (data) {
-                    console.log(data.msg);
+                    window.location.href = "/";
                     console.log(data.info);
                 }
             })

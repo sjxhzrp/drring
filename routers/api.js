@@ -90,7 +90,41 @@ router.post("/user/login",function (req,res) {
     //获取传过来的参数
     var uname=req.body.uname;
     var pwd=req.body.pwd;
-    if (pwd){
+    if (pwd===undefined){
+        pool.getConnection(function (err,conn) {
+            if(err){
+                console.log(err);
+                resData.code=0;
+                resData.msg="网络连接失败，请稍后重试";
+                res.json(resData);
+            }else {
+                conn.query("select yonhumin from user where zhanhumin=?", [uname], function (err, result) {
+                    conn.release();
+                    if (err) {
+                        console.log(err);
+                        resData.code = 0;
+                        resData.msg="网络连接失败，请稍后重试";
+                        res.json(resData);
+
+                    } else if(result.length<=0) {
+                        resData.code = 1;
+                        resData.msg="用户名或者密码错误，请验证后再试";
+                        res.json(resData);
+                    }else{
+                        resData.code = 2;
+                        resData.msg="登录成功";
+                        resData.info=result[0];   //传输到前台，好收获用户名
+
+                        //存session
+                        req.session.user={
+                            yonhumin:result[0]
+                        };
+                        res.json(resData);
+                    }
+                })
+            }
+        })
+    }else {
         pool.getConnection(function (err,conn) {
             if(err){
                 console.log(err);
@@ -124,41 +158,7 @@ router.post("/user/login",function (req,res) {
                 })
             }
         })
-    }else {
 
-        pool.getConnection(function (err,conn) {
-            if(err){
-                console.log(err);
-                resData.code=0;
-                resData.msg="网络连接失败，请稍后重试";
-                res.json(resData);
-            }else {
-                conn.query("select yonhumin from user where zhanhumin=?", [uname], function (err, result) {
-                    conn.release();
-                    if (err) {
-                        console.log(err);
-                        resData.code = 0;
-                        resData.msg="网络连接失败，请稍后重试";
-                        res.json(resData);
-
-                    } else if(result.length<=0) {
-                        resData.code = 1;
-                        resData.msg="用户名或者密码错误，请验证后再试";
-                        res.json(resData);
-                    }else{
-                        resData.code = 2;
-                        resData.msg="登录成功";
-                        resData.info=result[0];   //传输到前台，好收获用户名
-
-                        //存session
-                        req.session.user={
-                           yonhumin:result[0]
-                        };
-                        res.json(resData);
-                    }
-                })
-            }
-        })
     }
 });
 //
