@@ -1,0 +1,331 @@
+#content{
+    width: 100%;
+}
+.dr-bread{
+    height: 70px;
+    width: 1000px;
+    margin: 0 auto;
+}
+.dr-content-top{
+    height: 70px;
+    line-height: 70px;
+    margin-left: 9px;
+    color: #666;
+    font-size: 14px;
+}
+.dr-content-top a{
+    color: #666;
+}
+.dr-content-top .youjiantou{
+    /*background: url("");*/
+}
+.ringbuyfix{
+    width: 460px;
+    float: left;
+    margin-left: 160px;
+}
+.ringbuy{
+    width: 460px;
+    height: 460px;
+    border:1px solid #666;
+}
+#ringbuyimg{
+    width: 458px;
+    height: 458px;
+}
+ .smallimgs{
+    width: 460px;
+    height: 100px;
+     margin-top: 20px;
+     position: relative;
+}
+.smallimgs .leftjiantou{
+    display: inline-block;
+    width: 10px;
+    height: 19px;
+    background: url("../../public/images/pre_next.png") no-repeat;
+    position: absolute;
+    top:20px;
+}
+.smallimgs .ringjiantou{
+    display: inline-block;
+    width: 10px;
+    height: 19px;
+    background: url("../../public/images/pre_next.png") no-repeat -10px -19px;
+    position: absolute;
+    top:20px;
+    left:450px;
+}
+ .smallimgs .smallphotos{
+    width: 384px;
+    height: 60px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+ .smallimgs .smallphotos ul{
+    width: 588px;
+    height: 60px;
+}
+ .smallimgs .smallphotos ul li{
+    float: left;
+     margin-left: 14px;
+}
+.smallimgs .smallphotos ul li img{
+    border: none;
+}
+
+.smallimgs .smallphotos ul .activeimg{
+    border: 1px solid #FFA6A6;
+    box-sizing: border-box;
+}
+.ringbuyfix .ringbuyshar{
+    width: 460px;
+    height: 46px;
+    position: relative;
+    left:100px;
+    top:-10px;
+}
+.ringbuyfix .ringbuyshar span{
+    font-size: 12px;
+    color: #999;
+}
+.ringbuyfix .ringbuyshar p{
+    position: absolute;
+    top:0px;
+    left: 50px;
+}
+.ringbuyfix .ringbuyshar a{
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+}
+.ringbuyfix .ringbuyshar .fenxiang1{
+    background: url("../../public/images/ico-shares.png") no-repeat;
+}
+.ringbuyfix .ringbuyshar .fenxiang2{
+    background: url("../../public/images/ico-shares.png") no-repeat -30px 0;
+}
+.ringbuyfix .ringbuyshar .fenxiang3{
+    background: url("../../public/images/ico-shares.png") no-repeat -60px 0;
+}
+.ringbuyfix .ringbuyshar .fenxiang4{
+    background: url("../../public/images/ico-shares.png") no-repeat -90px 0;
+}
+.ringbuyfix .ringbuyshar .fenxiang5{
+    background: url("../../public/images/ico-shares.png") no-repeat 0 -35px;
+}
+
+
+
+.ringbuy-right{
+    position: relative;
+    float: right;
+    width: 520px;
+    height: 445px;
+    margin-right: 180px;
+    border: 1px solid #666;
+}
+.ringbuy-sale{
+    width: 520px;
+    height: 39px;
+    overflow: hidden;
+    background: #f9f9f9;
+    border-top: 1px dashed #ddd;
+    border-bottom: 1px dashed #ddd;
+    padding: 7px 0;
+    position: absolute;
+    top:100px;
+}
+.ringbuy-sale li{
+    float: left;
+    width: 170px;
+    height: 39px;
+    line-height: 39px;
+    border-right:1px dashed #ddd ;
+    text-align: center;
+}
+.ringbuy-sale .tiyan{
+    border-right: none;
+}
+.ringbuy-sale i{
+    color: #ffacac;
+    font-size: 12px;
+}
+.ringbuy-sale span{
+    color: #999;
+    font-size: 12px;
+}
+.ringbuy-sale a{
+    color: #c57d5c;
+    font-size: 12px;
+}
+.ringbuy-price{
+    position: absolute;
+    top:50px;
+}
+.ringbuy-price span{
+    color: #c57d5c;
+    font-size: 24px;
+}
+.ringbuy-price a{
+   color: #999;
+    margin-left: 350px;
+    font-size: 12px;
+}
+.ringbuy-price a:hover{
+    color: #c57d5c;
+}
+#ringbuy-choose{
+    position: absolute;
+    top:190px;
+}
+#ringbuy-choose .caizhi span{
+    color: #666;
+    padding-left: 30px;
+    font-size: 15px;
+}
+#ringbuy-choose .caizhi i{
+    display: inline-block;
+    width: 65px;
+    height: 30px;
+    border: 1px solid #999;
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center;
+    margin-left: 30px;
+    color: #666;
+}
+#ringbuy-choose .caizhi .baijin{
+    margin-left: 10px;
+}
+#ringbuy-choose .caizhi .active{
+    border: 2px solid #c57d5c;
+}
+.shoucun{
+    width: 500px;
+    height: 50px;
+    margin-top: 20px;
+}
+.shoucun span{
+    color: #666;
+    font-size: 14px;
+    margin-left: 30px;
+}
+.shoucun select{
+    width: 82px;
+    height: 28px;
+}
+.shoucun input{
+    width: 141px;
+    height: 27px;
+    margin-left: 6px;
+}
+.shoucun i{
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    border: 1px solid #999;
+    margin-left: 10px;
+    text-align: center;
+    line-height: 27px;
+    color: #999;
+}
+.shoucun em{
+    display: inline-block;
+    width: 66px;
+    height: 27px;
+    text-align: center;
+    line-height: 27px;
+    border: 1px solid #c57d5c;
+    color: #c57d5c;
+    font-size: 13px;
+    margin-left: 10px;
+}
+#ringbuy-choose p a{
+    color: #666;
+    font-size: 13px;
+    margin-left: 95px;
+    position: absolute;
+    top:90px;
+}
+#ringbuybutton{
+    width: 500px;
+    height: 40px;
+    position: absolute;
+    top:316px;
+    padding-left: 30px;
+}
+#ringbuybutton a{
+    display: inline-block;
+    width: 180px;
+    height: 40px;
+    background: #c57d5c;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    border: 1px solid #c57d5c;
+}
+#ringbuybutton .to_buyit{
+    background: white;
+    color: #c57d5c;
+}
+#ringbuybutton .to_nosc{
+    color: #E5B9A2;
+    font-size: 13px;
+    background: url("../../public/images/tosc.png") no-repeat left center;
+    padding-left: 25px;
+}
+.peisong{
+    font-size: 13px;
+    color: #838383;
+    position: absolute;
+    top:380px;
+    padding-left: 30px;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 10px;
+}
+    #fuwu{
+    position: absolute;
+    top:400px;
+    width: 520px;
+    height: 53px;
+    padding: 14px 0 14px 30px;
+    border-bottom: 1px dashed #ddd;
+}
+#fuwu strong{
+    color: #838383;
+    font-size: 13px;
+}
+#fuwu span{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    color: #838383;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 28px;
+    margin-right: 14px;
+}
+#fuwu a{
+    display: inline-block;
+    width: 85px;
+    height: 24px;
+    background: #c57d5c;
+    color: white;
+    line-height: 24px;
+    text-align: right;
+    font-size: 12px;
+}
+#fuwu a i{
+    color: white;
+
+}
+#fuwu .baohuan{
+   background: url("../../public/images/sev_first.png") no-repeat left center;
+}
+#fuwu .baoyou{
+    background: url("../../public/images/sev_sec.png") no-repeat left center;
+}
+#fuwu .baoyang{
+    background: url("../../public/images/sev_third.png") no-repeat left center;
+}
