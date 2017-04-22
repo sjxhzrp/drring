@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>登录</title>
+    <title>戴瑞珠宝官网会员登录</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.darryring.com/favicon.ico">
     <link rel="stylesheet" href="../../public/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../public/css/login.css">
     <link rel="stylesheet" href="../../public/css/footer.css">
@@ -16,14 +17,14 @@
 <body>
 <div class="bigcass">
     <div class="drlogo">
-        <a href="#">
+        <a href="javascript:void(0)" id="logo">
             <img src="../../public/images/logo.png"/>
         </a>
     </div>
     <div class="drlogo-right">
         <div class="dr_member_left left" id="long_status">
-            <a href="">登录</a>
-            <a href="" class="join">加入DR族</a>
+            <a href="javascript:void(0)">登录</a>
+            <a href="javascript:void(0)" id="zhucebtn" class="join">加入DR族</a>
         </div>
         <div class="dr_member_left left">
             <i><img src="../../public/images/telleft.png"/>400-01-13520</i>
@@ -83,44 +84,44 @@
             </div>
             <div id="dr-btn">
                 <a class="loginbtn" id="denglubtn">登录</a>
-                <a class="joinbtn">加入DR族</a>
+                <a class="joinbtn" >加入DR族</a>
             </div>
         </div>
     </div>
     <div id="findpwd" style="display: none">
         <ul>
-            <li class="active" id="myli1"><a href="#" class="active1" id="phone">通过手机找回</a></li>
-            <li id="myli2"><a href="#" id="email">通过邮箱找回</a></li>
+            <li class="active" id="myli1"><a href="javascript:void(0)" class="active1" id="phone">通过手机找回</a></li>
+            <li id="myli2"><a href="javascript:void(0)" id="email">通过邮箱找回</a></li>
         </ul>
         <div id="getphone">
             <div class="form-group">
-                <input type="text" class="form-control " id="phonehaoma" placeholder="请输入您注册的手机号码">
+                <input type="text" class="form-control " name="elephone" id="phonehaoma" placeholder="请输入您注册的手机号码">
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" id="pwd2" placeholder="请输入长度为6-20位数的密码">
+                <input type="password" class="form-control" name="phonepwd" id="pwd2" placeholder="请输入长度为6-20位数的密码">
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" id="phoneyanzhengma" placeholder="输入验证码">
                 <a href="javascript:void(0)" id="phonehuoquyanzhengma" >获取语音验证码</a>
             </div>
-            <input type="button"  value="确认重置密码" class="colorbtn"/>
+            <input type="button" name="phonexiugaimima"  value="确认重置密码" class="colorbtn"/>
             <div class="loginlink">
                 <a href="javascript:void(0)" class="fanhui">>返回登录</a>
             </div>
         </div>
-        <form id="getemail" style="display: none">
+        <div id="getemail" style="display: none">
             <div class="form-group">
-                <input type="text" class="form-control " id="emaildizhi" placeholder="请输入您的邮箱地址">
+                <input type="text" class="form-control" name="emaildizhi" id="emaildizhi" placeholder="请输入您的邮箱地址">
             </div>
             <div class="form-group">
                 <input type="text" class="form-control" id="input" placeholder="请输入验证码">
                 <input type = "button" id="code" onclick="createCode()"/>
             </div>
-            <input type="button"  value="确认重置密码" class="colorbtn" id="chongzhi" onclick = "validate()"/>
+            <input type="button" name="emailxiugaimima"  value="确认重置密码" class="colorbtn" id="chongzhi" onclick = "validate()"/>
             <div class="loginlink" id="loginlink">
                 <a href="javascript:void(0)" class="fanhui">>返回登录</a>
             </div>
-        </form>
+        </div>
     </div>
 </div>
 

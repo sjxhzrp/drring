@@ -1,4 +1,6 @@
 $(function () {
+
+
     //注册
     $("#emil").on("click",function () {
         $("#zhanghao").hide();
@@ -140,7 +142,6 @@ $(function () {
                 alert("用户名不能为空");
                 return;
             };
-            console.log(uname)
             $.ajax({
                 type: "post",
                 url: "/api/user/login",  //地址
@@ -149,7 +150,7 @@ $(function () {
                 },
                 dataType: "json",
                 success: function (data) {
-                    window.location.href = "/";
+                    window.location.href = "/shopinfo";
                     console.log(data.info);
                 }
             });
@@ -161,7 +162,6 @@ $(function () {
                 alert("用户名或者密码不能为空");
                 return;
             };
-            console.log(uname+"_____"+pwd)
             $.ajax({
                 type: "post",
                 url: "/api/user/login",  //地址
@@ -171,13 +171,61 @@ $(function () {
                 },
                 dataType: "json",
                 success: function (data) {
-                    window.location.href = "/";
+                    window.location.href = "/shopinfo";
                     console.log(data.info);
+
                 }
             })
         }
     })
 
+
+    //忘记密码重置
+    var getphone=$("#getphone");
+    var getemail=$("#getemail");
+    var phonexiugaimima=getphone.find("[name='phonexiugaimima']");
+    var emailxiugaimima=getphone.find("[name='emailxiugaimima']");
+
+    phonexiugaimima.on("click",function () {
+        var elephone=getphone.find("[name='elephone']").val();
+        var phonepwd=getphone.find("[name='phonepwd']").val();
+        console.log(elephone+"----"+phonepwd);
+        if (elephone == "" || elephone == null || phonepwd == "" || phonepwd == null) {
+            alert("用户名或者密码不能为空");
+            return;
+        };
+
+        $.ajax({
+            type: "post",
+            url: "/api/user/password",  //地址
+            data: {               //传参
+                elephone: elephone,
+                phonepwd: phonepwd
+            },
+            dataType: "json",
+            success: function (data) {
+                alert(data.msg);
+            }
+        });
+
+    })
+
+    var denglu=$("#denglu");
+    denglu.on("click",function () {
+        window.location.href = "/login";
+    });
+    var zhucebtn=$("#zhucebtn");
+    zhucebtn.on("click",function () {
+        window.location.href = "/regisetr";
+    });
+    var logo=$("#logo");
+    logo.on("click",function () {
+        window.location.href = "/";
+    });
+    var logo2=$("#logo2");
+    logo2.on("click",function () {
+        window.location.href = "/";
+    });
     // //退出
     // $logout.on("click",function () {
     //     $.get("/api/user/logout",function (data) {
