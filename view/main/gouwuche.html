@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../public/css/header.css"/>
+    <link rel="stylesheet" href="../../public/css/gouwuche.css"/>
+</head>
+<body>
+<div id="box">
+
+    <!--头部    -->
+    <div class="dr_header">
+        <div class="dr_header_content fix">
+            <div class="dr_logo left">
+                <a href=" "><img src="../../public/images/drlogo.png"></a>
+                <a href=" "><span>男士一生只能订制一枚</span></a>
+            </div>
+            <div class="dr_member right">
+                <!--店铺-->
+                <div class="drmember_sec">
+                    <div class="dr_member_left left" id="long_status">
+                        <a href="">登录</a>
+                        <a href="">加入DR族</a>
+                    </div>
+                    <div class="dr_member_left left">
+                        <i><img src="../../public/images/telleft.png"/>400-01-13520</i>
+                    </div>
+                    <div class="dr_member_left left">
+                        <a href="">DR社区</a>
+                    </div>
+                    <div class="drapp_dowonload left">
+                        <span>DR族APP</span>
+                        <div class="drappBottom">
+                            <p>"暖心的情侣互动"<br/>"下载DR专属APP"</p>
+                        </div>
+                    </div>
+                    <div class="dr_member_left drwapWeb left">
+                        <a href="">手机官网</a>
+                        <div class="drappBottom" style="display: none;">
+                            <p>"扫描二维码"<br/>"访问"</p>
+                        </div>
+                    </div>
+                    <ul class="dr_member_right" id="dr_country">
+                        <li><a href="">中文（简体）</a></li>
+                        <li id="dr_english" style="display: none;">
+                            <a href="">English</a>
+                            <a href="">中文（繁体）</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="drmember_shop" style="z-index: 0;">
+                    <div class="drmember_shopAll">
+                        <a class="drmember_shopBtn" href="">全国店铺 ></a>
+                        <!--获取所有的地址-->
+                        <div class="dr_member_ipx1" style="display: none;">
+                            <a href="">北京</a>
+                            <a href="">江苏</a>
+                            <a href="">上海</a>
+                            <a href="">浙江</a>
+                            <a href="">哈尔滨</a>
+                        </div>
+                    </div>
+                    <p class="drmember_gps">北京</p>
+                </div>
+                <form method="post" name="form1" id="form1" action="">
+                    <div class="drmember_yz">
+                        <!--提示-->
+                        <div class="drmember_yz_word index_yz_word" id="dr_sfwrong" style="display: none;">
+                            <p>Darry Ring严格规定男士凭身份证一生仅能定制一枚，象征男人一生真爱的最高承诺。输入身份证号码即可查询购买记录。</p>
+                        </div>
+                        <div class="drmember_yz_wrong" style="display: none;">
+                            <p>身份证有误，请重新输入。</p>
+                        </div>
+                        <div class="drmember_yzborder">
+                            <div class="drmember_yzborderul">见证浪漫爱情</div>
+                            <input type="text" placeholder="请输入身份证号验证真爱承诺" name="identity" value id="txtIDCardw">
+                            <input type="text" value="" style="display:none">
+                            <i id="trueLoveSeach"></i>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--导航栏-->
+    <div class="dr_navbk fix">
+        <ul class="dr_nav w1000">
+            <li id="DrNav">
+                <a href="/" phptag="官网_公共头部_文字链接_DR">DR</a>
+                <!--下拉导航-->
+                <div class="dr_navsuv dr_navsuv-third" id="DRsubNav" style="display: none;">
+                    <!--导航上部分-->
+                    <div class="dr_navsuv-top">
+                        <!--中间内容-->
+                        <div class="dr_navsuv-cort">
+                            <!--品牌文化-->
+                            <div class="dr_navsuv-curture">
+                                <div class="dr_navsuv-curturesame fl">
+                                    <img src="../../public/images/drword.png">
+                                    <p class="tojoinDR"><a href="">加入DR族</a></p>
+                                </div>
+                                <div class="dr_navsuv-curturesame fl">
+                                    <a href="">
+                                        <img src="../../public/images/drimg.jpg">
+                                    </a>
+                                    <p><a href="">搜索DR族</a></p>
+                                </div>
+                            </div>
+                            <!--品牌文化end-->
+                        </div>
+                        <!--中间内容end-->
+                    </div>
+                    <!--导航上部分end-->
+                </div>
+                <!--下拉导航end-->
+            </li>
+            <li id="qhzjNav">
+                <a href="">求婚钻戒</a>
+                <!--下拉导航-->
+                <div class="dr_navsuv dr_navsuv-first" id="qhzjsubNav">
+                    <!--导航上部分-->
+                    <div class="dr_navsuv-top">
+                        <!--中间内容-->
+                        <div class="dr_navsuv-cort dr_navTabs">
+                            <!--戒指-->
+                            <div class="dr_navsuv-ring dr_navsuvleft-ring fl">
+                                <a href="" style="display: block;">
+                                    <img src="../../public/images/1477450434.jpg" width="200" height="200">
+                                </a>
+                                <a href="" style="display: none;">
+                                    <img src="../../public/images/1481184001.jpg" width="200" height="200">
+                                </a>
+                                <a href="" style="display: none;">
+                                    <img src="../../public/images/1477450647.jpg" width="200" height="200">
+                                </a>
+                                <a href="" style="display: none;">
+                                    <img src="../../public/images/1473674984.jpg" width="200" height="200">
+                                </a>
+                                <a href="" style="display: none;">
+                                    <img src="../../public/images/1473675043.jpg" width="200" height="200">
+                                </a>
+                            </div>
+                            <!--戒指end-->
+                            <!--相同部分-->
+                            <div class="dr_navsuv-same dr_navsuvleft-same fl">
+                                <a href="" class="select"><p>稀世粉钻</p></a>
+                                <a href=""><p>MY HEART 系列</p></a>
+                                <a href=""><p>FOREVER 系列</p></a>
+                                <a href=""><p>TRUE LOVE 系列</p></a>
+                                <a href=""><p>I SWARE 系列</p></a>
+                            </div>
+                            <!--相同部分end-->
+                            <!--相同部分-->
+                            <div class="dr_navsuv-same dr_navsuvright-same fl">
+                                <a href="" class="select"><p>JUST YOU 系列</p></a>
+                                <a href=""><p>BELIEVE 系列</p></a>
+                                <a href=""><p>LOVE LINE 系列</p></a>
+                                <a href=""><p>PRINCESS 系列</p></a>
+                                <a href=""><p>查看全部商品</p></a>
+                            </div>
+                            <!--相同部分end-->
+                            <!--戒指-->
+                            <div class="dr_navsuv-ring dr_navsuvright-ring fl">
+                                <a href="" style="display: block;">
+                                    <img src="../../public/images/1473675081.jpg" width="200" height="200">
+                                </a>
+                                <a href="" style="display: none;">
+                                    <img src="../../public/images/1477450706.jpg" width="200" height="200">
+                                </a>
+                                <a href="" style="display: none;">
+                                    <img src="../../public/images/1477450804.jpg" width="200" height="200">
+                                </a>
+                                <a href="" style="display: none;">
+                                    <img src="../../public/images/1477450853.jpg" width="200" height="200">
+                                </a>
+                                <a href="" style="display: none;">
+                                    <img src="../../public/images/1477450884.jpg" width="200" height="200">
+                                </a>
+                                <a href="" style="display: none;">
+                                    <img src="../../public/images/201502061050359c37df606b.jpg" width="200" height="200">
+                                </a>
+                            </div>
+                            <!--戒指end-->
+                        </div>
+                        <!--中间内容end-->
+                    </div>
+                    <!--导航上部分end-->
+                </div>
+                <!--下拉导航end-->
+            </li>
+            <li id="zaskNav">
+                <a href="" phptag="官网_公共头部_文字链接_爱的礼物">爱的礼物</a>
+                <!--下拉导航-->
+                <div class="dr_navsuv dr_navsuv-sec" id="zasksubNav" style="display: none;">
+                    <!--导航上部分-->
+                    <div class="dr_navsuv-top">
+                        <!--中间内容-->
+                        <div class="dr_navsuv-cort dr_navTabs">
+                            <!--戒指-->
+                            <div class="dr_navsuv-ring dr_navsuvleft-ring fl">
+                                <a href="" style="display: none;">
+                                    <img src="../../public/images/1477451237.jpg" width="200" height="200">
+                                </a>
+                                <a href="" style="display: none;">
+                                    <img src="../../public/images/1477451411.jpg" width="200" height="200">
+                                </a>
+                                <a href="" style="display: none;">
+                                    <img src="../../public/images/1477451433.jpg" width="200" height="200">
+                                </a>
+                                <a href="" style="display: none;">
+                                    <img src="../../public/images/1477451532.jpg" width="200" height="200">
+                                </a>
+                                <a href="" style="display: block;">
+                                    <img src="../../public/images/1477451467.jpg" width="200" height="200">
+                                </a>
+                            </div>
+                            <!--戒指end-->
+                            <!--相同部分-->
+                            <div class="dr_navsuv-same dr_navsuvleft-same fl">
+                                <a href="" class=""><p>对戒</p></a>
+                                <a href="" class=""><p>男戒</p></a>
+                                <a href="" class=""><p>吊坠</p></a>
+                                <a href="" class=""><p>手链/手镯</p></a>
+                                <a href="" class="select"><p>耳钉/耳环</p></a>
+                            </div>
+                            <!--相同部分end-->
+                            <!--相同部分-->
+                            <div class="dr_navsuv-same dr_navsuvright-same fl">
+                                <a href="" class="select"><p>十二星座吊坠</p></a>
+                                <a href=""><p>纪念日礼物</p></a>
+                                <a href=""><p>生日礼物</p></a>
+                                <a href=""><p>节日礼物</p></a>
+                                <a href=""><p>查看全部商品</p></a>
+                            </div>
+                            <!--相同部分end-->
+                            <!--戒指-->
+                            <div class="dr_navsuv-ring dr_navsuvright-ring fl">
+                                <a href="" style="display: block;">
+                                    <img src="../../public/images/1477451612.jpg" width="200" height="200">
+                                </a>
+                                <a href="" style="display: none;">
+                                    <img src="../../public/images/1477451664.jpg" width="200" height="200">
+                                </a>
+                                <a href="" style="display: none;">
+                                    <img src="../../public/images/1477451745.jpg" width="200" height="200">
+                                </a>
+                                <a href="" style="display: none;">
+                                    <img src="../../public/images/1477451776.jpg" width="200" height="200">
+                                </a>
+                                <a href="" style="display: none;">
+                                    <img src="../../public/images/1477451815.jpg" width="200" height="200">
+                                </a>
+
+                                <a href="" style="display: none;">
+                                    <img src="../../public/images/20150129121254e8cdb1d2f7.jpg" width="200" height="200">
+                                </a>
+                            </div>
+                            <!--戒指end-->
+                        </div>
+                        <!--中间内容end-->
+                    </div>
+                    <!--导航上部分end-->
+                </div>
+                <!--下拉导航end-->
+            </li>
+            <li>
+                <a href="" phptag="官网_公共头部_文字链接_钻戒定制">钻戒定制</a>
+            </li>
+            <li id="shopNav">
+                <a href="" phptag="官网_公共头部_文字链接_DR实体店">DR实体店</a>
+                <!--下拉导航-->
+                <div class="dr_navsuv dr_navsuv-third" id="ShopsubNav">
+                    <!--导航上部分-->
+                    <div class="dr_navsuv-top">
+                        <!--中间内容-->
+                        <div class="dr_navsuv-cort">
+                            <!--品牌文化-->
+                            <div class="dr_navsuv-curture">
+                                <div class="dr_navsuv-curturesame fl">
+                                    <!--热门城市-->
+                                    <div class="drstore-hot">
+                                        <h3><span>热门城市</span></h3>
+                                        <p><a href="">香港</a><a href="">上海</a><a href="">北京</a><a href="">广州</a><a href="">深圳</a></p>
+                                    </div>
+                                    <!--热门城市end-->
+                                    <a href="" id="right_Href">更多&gt;</a>
+                                    <!--tab选项-->
+                                    <ul class="drstore-tab" id="drstore-tab-nav">
+                                        <li class="drstore-tabhover">
+                                            华北区
+                                            <!--店铺名字-->
+                                            <div class="drstore-shopname">
+                                                <span class="drstore-shopnamehover" style="opacity: 1;"><a href="">北京市</a></span>
+                                                <span style="opacity: 1;"><a href="">石家庄市</a></span>
+                                                <span style="opacity: 1;"><a href="">唐山市</a></span>
+                                                <span style="opacity: 1;"><a href="">太原市</a></span>
+                                                <span style="opacity: 1;"><a href="">呼和浩特市</a></span>
+                                                <span style="opacity: 1;"><a href="">天津市</a></span>
+                                                <span style="opacity: 1;"><a href="">更多&gt;</a></span>
+                                            </div>
+                                            <!--店铺名字end-->
+                                        </li>
+                                        <li class="">
+                                            华东区
+                                            <!--店铺名字-->
+                                            <div class="drstore-shopname">
+                                                <span class="drstore-shopnamehover"><a href="">上海市</a></span>
+                                                <span><a href="">上海市</a></span>
+                                                <span><a href="">南京市</a></span>
+                                                <span><a href="">无锡市</a></span>
+                                                <span><a href="">常州市</a></span>
+                                                <span><a href="">苏州市</a></span>
+                                                <span><a href="">南通市</a></span>
+                                                <span><a href="">杭州市</a></span>
+                                                <span><a href="">宁波市</a></span>
+                                                <span><a href="">温州市</a></span>
+                                                <span><a href="">金华市</a></span>
+                                                <span><a href="">合肥市</a></span>
+                                                <span><a href="">福州市</a></span>
+                                                <span><a href="">厦门市</a></span>
+                                                <span><a href="">济南市</a></span>
+                                                <span><a href="">青岛市</a></span>
+                                                <span><a href="">烟台市</a></span>
+                                                <span><a href="">潍坊市</a></span>
+                                                <span><a href="">临沂市</a></span>
+                                                <span><a href="">更多&gt;</a></span>
+                                            </div>
+                                            <!--店铺名字end-->
+                                        </li>
+                                        <li class="">
+                                            华中区
+                                            <!--店铺名字-->
+                                            <div class="drstore-shopname">
+                                                <span class="drstore-shopnamehover"><a href="">南昌市</a></span>
+                                                <span><a href="">郑州市</a></span>
+                                                <span><a href="">武汉市</a></span>
+                                                <span><a href="">长沙市</a></span>
+                                                <span><a href="">更多&gt;</a></span>
+                                            </div>
+                                            <!--店铺名字end-->
+                                        </li>
+                                        <li class="">
+                                            华南区
+                                            <!--店铺名字-->
+                                            <div class="drstore-shopname">
+                                                <span class="drstore-shopnamehover"><a href="">广州市</a></span>
+                                                <span><a href="">深圳市</a></span>
+                                                <span><a href="">佛山市</a></span>
+                                                <span><a href="">东莞市</a></span>
+                                                <span><a href="">南宁市</a></span>
+                                                <span><a href="">海口市</a></span>
+                                                <span><a href="">更多&gt;</a></span>
+                                            </div>
+                                            <!--店铺名字end-->
+                                        </li>
+                                        <li class="">
+                                            西南区
+                                            <!--店铺名字-->
+                                            <div class="drstore-shopname">
+                                                <span class="drstore-shopnamehover"><a href="">重庆市</a></span>
+                                                <span><a href="">重庆市</a></span>
+                                                <span><a href="">成都市</a></span>
+                                                <span><a href="">贵阳市</a></span>
+                                                <span><a href="">昆明市</a></span>
+                                                <span><a href="">更多&gt;</a></span>
+                                            </div>
+                                            <!--店铺名字end-->
+                                        </li>
+                                    </ul>
+                                    <!--tab选项end-->
+                                    <!--线-->
+                                    <div class="drstore-allline">
+                                        <div class="drstore-mrline"></div>
+                                        <div class="drstore-xz" style="width:26px">
+                                            <div class="drstore-xzline"></div>
+                                            <div class="drstore-xzbox">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--线end-->
+                                </div>
+                                <div class="dr_navsuv-curturesame fl">
+                                    <ul class="drnav_slider" id="drnav_slider">
+                                        <li style="display: block;">
+                                            <a href="" target="_blank">
+                                                <img src="../../public/images/1477304638.jpg">
+                                            </a>
+                                            <p><a href="">全国实体店</a></p>
+                                        </li>
+                                        <li style="display: none;">
+                                            <a href="" target="_blank">
+                                                <img src="../../public/images/1477304603.jpg">
+                                            </a>
+                                            <p><a href="">重庆观音桥店</a></p>
+                                        </li>
+                                        <li style="display: none;">
+                                            <a href="" target="_blank">
+                                                <img src="../../public/images/1477304559.jpg">
+                                            </a>
+                                            <p><a href="">香港店</a></p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--品牌文化end-->
+                        </div>
+                        <!--中间内容end-->
+                    </div>
+                    <!--导航上部分end-->
+                </div>
+                <!--下拉导航end-->
+            </li>
+            <li id="ppwhNav">
+                <a href="" phptag="官网_公共头部_文字链接_DR品牌文化">DR品牌文化</a>
+                <!--下拉导航-->
+                <div class="dr_navsuv dr_navsuv-third" id="ppwhsubNav">
+                    <!--导航上部分-->
+                    <div class="dr_navsuv-top">
+                        <!--中间内容-->
+                        <div class="dr_navsuv-cort">
+                            <!--品牌文化-->
+                            <div class="dr_navsuv-curture">
+                                <div class="dr_navsuv-curturesame fl">
+                                    <a href="">
+                                        <img src="../../public/images/1477304677.jpg">
+                                    </a>
+                                    <p><a href="">品牌文化</a></p>
+                                </div>
+                                <div class="dr_navsuv-curturesame fl">
+                                    <a href="">
+                                        <img src="../../public/images/1477304692.jpg">
+                                    </a>
+                                    <p><a href="">明星推荐</a></p>
+                                </div>
+                            </div>
+                            <!--品牌文化end-->
+                        </div>
+                        <!--中间内容end-->
+                    </div>
+                    <!--导航上部分end-->
+                </div>
+                <!--下拉导航end-->
+            </li>
+            <li id="DRsqNav">
+                <a href="">探索DR</a>
+                <!--下拉导航-->
+                <div class="dr_navsuv dr_navsuv-third" id="DRsqsubNav">
+                    <!--导航上部分-->
+                    <div class="dr_navsuv-top">
+                        <!--中间内容-->
+                        <div class="dr_navsuv-cort">
+                            <!--品牌文化-->
+                            <div class="dr_navsuv-curture">
+                                <div class="dr_navsuv-curturesame fl">
+                                    <a href="">
+                                        <img src="../../public/images/1488350702.jpg">
+                                    </a>
+                                    <p><a href="">DR专题</a></p>
+                                </div>
+                                <div class="dr_navsuv-curturesame fl">
+                                    <a href="">
+                                        <img src="../../public/images/1488352096.jpg">
+                                    </a>
+                                    <p><a href="">DR故事</a></p>
+                                </div>
+                            </div>
+                            <!--品牌文化end-->
+                        </div>
+                        <!--中间内容end-->
+                    </div>
+                    <!--导航上部分end-->
+                </div>
+                <!--下拉导航end-->
+            </li>
+        </ul>
+    </div>
+
+    <!--购买部分-->
+    <div id="content">
+        <div class="dr-bread">
+            <div class="dr-content-top">
+                <a href="javascript:;">Darry Ring</a>
+                <span class="youjiantou"></span>
+                <span id="name">男戒</span>
+            </div>
+        </div>
+        <!--左边-->
+        <div class="ringbuyfix">
+            <div class="ringbuy">
+                <img src="../../public/images/img1.jpg" id="ringbuyimg"/>
+            </div>
+            <div class="smallimgs">
+                <span class="leftjiantou"></span>
+                <span class="ringjiantou"></span>
+                <div class="smallphotos">
+                    <ul>
+                        <li class="activeimg"><img src="../../public/images/img1.jpg" width="60px" height="54px"></li>
+                        <li><img src="../../public/images/img2.jpg" width="60px" height="54px"></li>
+                        <li><img src="../../public/images/img3.jpg" width="60px" height="54px"></li>
+                        <li><img src="../../public/images/img4.jpg" width="60px" height="54px"></li>
+                        <li><img src="../../public/images/img5.jpg" width="60px" height="54px"></li>
+                        <li><img src="../../public/images/img2.jpg" width="60px" height="54px"></li>
+                        <li><img src="../../public/images/img3.jpg" width="60px" height="54px"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ringbuyshar">
+                <span>分享到:</span>
+                <p>
+                <a href="javascript:;" class="fenxiang1"></a>
+                <a href="javascript:;" class="fenxiang2"></a>
+                <a href="javascript:;" class="fenxiang3"></a>
+                <a href="javascript:;" class="fenxiang4"></a>
+                <a href="javascript:;" class="fenxiang5"></a>
+                </p>
+            </div>
+        </div>
+        <div class="ringbuy-right">
+            <h2>黑骑士  10分</h2>
+            <div class="ringbuy-price">
+                <span class="f1">¥3999</span>
+                <a href="#">更多其让他>></a>
+            </div>
+            <ul class="ringbuy-sale">
+                <li>
+                    <span>近期售出：</span>
+                    <i>973</i>
+                </li>
+                <li>
+                    <span>评价：</span>
+                    <i>20</i>
+                </li>
+                <li class="tiyan">
+                    <a href="#">实体店体验下</a>
+                </li>
+            </ul>
+            <div id="ringbuy-choose">
+                <div class="caizhi">
+                    <span>材质</span>
+                    <i>PT950</i>
+                    <i class="active baijin">白18K金</i>
+                </div>
+                <div class="shoucun">
+                    <span>选择手寸</span>
+                    <select id="handSizes">
+                        <option>选择手寸</option>
+                    </select>
+                    <input type="text" placeholder="免费刻字" title="限输入5个汉字或10个字母" id="carved"/>
+                    <i>#</i>
+                    <i>&</i>
+                    <em>预览效果</em>
+                </div>
+                <p><a href="#">如何测量?</a></p>
+            </div>
+            <div id="ringbuybutton">
+                <a href="javascript:;" class="to_shopcart">
+                    <span>加入购物车</span>
+                </a>
+                <a href="javascript:;" class="to_buyit">立即购买</a>
+                <i class="to_nosc">收藏商品</i>
+                <i class="to_ysc" style="display: none;">已收藏</i>
+            </div>
+            <p class="peisong">配送说明:预计15个工作日送达（限大陆地区），其他地区请咨询客服。</p>
+            <div id="fuwu">
+                <strong>服务承诺</strong>
+                <span class="baohuan">15天包换</span>
+                <span class="baoyou">全国包邮</span>
+                <span class="baoyang">终生保养</span>
+                <a href="javascript:;">
+                    <i>在线客服</i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="hottop">
+        <span>热门推荐</span>
+        <a href="javascript:;">更多></a>
+    </div>
+    <div id="hotcort">
+        <span class="preend"></span>
+        <span class="next"></span>
+    </div>
+
+</body>
+</html>
