@@ -3,25 +3,28 @@
  */
 $(function () {
     $("#qhzjNav").bind("mouseover",function () {
-        $("#xialadiv2").hide();
-        $("#xialadiv1").show();
+        $("#zasksubNav").hide();
+        $("#qhzjsubNav").show();
     }).bind("mouseout",function () {
-        $("#xialadiv1").hide();
+        $("#qhzjsubNav").hide();
     });
     $("#zaskNav").bind("mouseover",function () {
-        $("#xialadiv1").hide();
-        $("#xialadiv2").show();
+        $("#qhzjsubNav").hide();
+        $("#zasksubNav").show();
     }).bind("mouseout",function () {
-        $("#xialadiv2").hide();
+        $("#zasksubNav").hide();
     });
-    $("#xialadiv1").bind("mouseover",function () {
-        $("#xialadiv1").show();
-    }).bind("mouseout",function () {
-        $("#xialadiv1").hide();
+
+
+    var denglu=$("#denglu");
+    var zhuce=$("#zhuce");
+
+    denglu.on("click",function () {
+        window.location.href = "/login";
     });
-    $("#xialadiv2").bind("mouseover",function () {
-        $("#xialadiv2").show();
-    }).bind("mouseout",function () {
-        $("#xialadiv2").hide();
+    zhuce.on("click",function () {
+        window.location.href = "/regisetr";
     });
+
+
 })

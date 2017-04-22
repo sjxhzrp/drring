@@ -46,7 +46,7 @@ a {
 .smallcass .active1{
     color: #C67C59;
 }
-form{
+#zhanghao           {
     position: absolute;
     top:90px;
 }
@@ -116,8 +116,12 @@ form{
  #btn,#btn1{
     width: 250px;
     position: absolute;
-    top:250px;
+    top:300px;
     left:40px;
+}
+#emilform                  {
+    position: absolute;
+    top:90px;
 }
  .denglu{
     position: absolute;

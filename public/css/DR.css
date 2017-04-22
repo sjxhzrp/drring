@@ -1,70 +1,8 @@
-#xialadiv1{
-    position: absolute;
-    width: 1000px;
-    height: 260px;
-    background: white;
-    top: 220px;
-    left: 175px;
-    z-index: 500;
-    transition: 1s;
-}
-#xialadiv1 img{
-    float: left;
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-#xialadiv1 img#img1{
-    margin-left: 40px;
-}
-#xialadiv1 ul li{
-    border-bottom:1px solid #DBDBDB;
-    color: #5E5E61;
-    height: 45px;
-    width: 190px;
-    text-align: center;
-    line-height: 45px;
-    font-size: 14px;
-}
-#xialadiv1 ul li:hover{
+#qhzjsubNav .dr_navsuv-same a p:hover{
     border-bottom:1px solid #aaa;
 }
-#xialadiv1 ul{
-    float: left;
-    margin: 10px 40px;
-}
-#xialadiv2{
-    position: absolute;
-    width: 1000px;
-    height: 260px;
-    background: white;
-    top: 220px;
-    left: 175px;
-    z-index: 500;
-    transition: 1s;
-}
-#xialadiv2 img{
-    float: left;
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-#xialadiv2 img#img1{
-    margin-left: 40px;
-}
-#xialadiv2 ul li{
-    border-bottom:1px solid #DBDBDB;
-    color: #5E5E61;
-    height: 45px;
-    width: 190px;
-    text-align: center;
-    line-height: 45px;
-    font-size: 14px;
-}
-#xialadiv2 ul li:hover{
+#zasksubNav .dr_navsuv-same a p:hover{
     border-bottom:1px solid #aaa;
-}
-#xialadiv2 ul{
-    float: left;
-    margin: 10px 40px;
 }
 .dr_indexAdv{
     height:320px;
