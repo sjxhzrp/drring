@@ -23,11 +23,23 @@
     width: 460px;
     float: left;
     margin-left: 160px;
+    position: relative;
 }
 .ringbuy{
     width: 460px;
     height: 460px;
-    border:1px solid #666;
+    border:1px solid #F3F3F3;
+}
+.ringbuy .bigImagediv{
+    border: 1px solid #999;
+    position: absolute;
+    overflow: hidden;
+    z-index: 1000;
+}
+.ringbuy .bigImagediv img{
+    width: 1700px;
+    height: 1700px;
+    margin: auto;
 }
 #ringbuyimg{
     width: 458px;
@@ -123,7 +135,6 @@
     width: 520px;
     height: 445px;
     margin-right: 180px;
-    border: 1px solid #666;
 }
 .ringbuy-sale{
     width: 520px;
@@ -328,4 +339,95 @@
 }
 #fuwu .baoyang{
     background: url("../../public/images/sev_third.png") no-repeat left center;
+}
+
+#drhot{
+    width: 1000px;
+    height: 257px;
+    position: absolute;
+    top:920px;
+    left: 200px;
+}
+#hottop{
+    border-bottom: 2px solid #eaeceb;
+    text-align: center;
+    margin-bottom: 40px;
+    height: 27px;
+    position: relative;
+}
+#hottop span{
+    display: inline-block;
+    width: 96px;
+    height: 25px;
+    border-bottom: 2px solid #222;
+    color: #222;
+    font-size: 13px;
+    font-weight: bold;
+}
+#hottop a{
+    color: #222;
+    font-size: 12px;
+    position: absolute;
+    right: 20px;
+}
+#hottop a:hover{
+    color: #c57d5c;
+}
+#hotshoumai{
+    width: 870px;
+    height: 170px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#hotshoumai ul{
+    width: 1400px;
+}
+#hotshoumai ul li{
+    display: inline-block;
+    width: 130px;
+    height: 170px;
+    float: left;
+    text-align: center;
+    padding-left: 40px;
+}
+#hotshoumai ul li img{
+    width: 130px;
+    height: 70px;
+}
+#hotshoumai ul li p:nth-of-type(1){
+    color:#888888;
+    font-size: 12px;
+}
+#hotshoumai ul li p:nth-of-type(2){
+    color:#C57E5D;
+    font-size: 12px;
+    padding-top: 10px;
+}
+#hotcort .preend{
+    display: inline-block;
+    width: 10px;
+    height: 19px;
+    background: url("../../public/images/pre_next.png") no-repeat ;
+    position: absolute;
+    top:120px;
+}
+#hotcort .next{
+    display: inline-block;
+    width: 10px;
+    height: 19px;
+    background: url("../../public/images/pre_next.png") no-repeat -10px -19px;
+    position: absolute;
+    top:120px;
+    right: 20px;
+}
+#bigimg{
+    position: absolute;
+    top:1120px;
+    left: 200px;
+}
+.dr_footer{
+    position: absolute;
+    width: 100%;
+    top:1800px;
 }
